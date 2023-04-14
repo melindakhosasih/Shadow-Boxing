@@ -1,0 +1,6 @@
+Assets/Assets/BoxingGym/Gym/DemoScene/Sky02.exr filter=lfs diff=lfs merge=lfs -text
+Assets/Assets/Boxer_7631tris/textures/skin_N.tga filter=lfs diff=lfs merge=lfs -text
+Assets/Assets/Boxer_7631tris/textures/skin_SP.tga filter=lfs diff=lfs merge=lfs -text
+Assets/Assets/Boxer_7631tris/textures/skin_D.tga filter=lfs diff=lfs merge=lfs -text
+Assets/WB/Textures/Boxeur_white_skin_D.tga filter=lfs diff=lfs merge=lfs -text
+Assets/WB/Textures/Boxeur_white_skin_N.tga filter=lfs diff=lfs merge=lfs -text
