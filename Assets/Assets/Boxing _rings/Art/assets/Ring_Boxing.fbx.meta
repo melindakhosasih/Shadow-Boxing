@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: e660f85e78a5cf44b986321b687454c1
+timeCreated: 1491753234
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Boxing_ring_1_1
+    100002: Boxing_ring_1_10
+    100004: Boxing_ring_1_11
+    100006: Boxing_ring_1_12
+    100008: Boxing_ring_1_13
+    100010: Boxing_ring_1_14
+    100012: Boxing_ring_1_15
+    100014: Boxing_ring_1_16
+    100016: Boxing_ring_1_17
+    100018: Boxing_ring_1_18
+    100020: Boxing_ring_1_19
+    100022: Boxing_ring_1_2
+    100024: Boxing_ring_1_20
+    100026: Boxing_ring_1_3
+    100028: Boxing_ring_1_4
+    100030: Boxing_ring_1_5
+    100032: Boxing_ring_1_6
+    100034: Boxing_ring_1_7
+    100036: Boxing_ring_1_8
+    100038: Boxing_ring_1_9
+    100040: Light
+    100042: Ring
+    100044: //RootNode
+    400000: Boxing_ring_1_1
+    400002: Boxing_ring_1_10
+    400004: Boxing_ring_1_11
+    400006: Boxing_ring_1_12
+    400008: Boxing_ring_1_13
+    400010: Boxing_ring_1_14
+    400012: Boxing_ring_1_15
+    400014: Boxing_ring_1_16
+    400016: Boxing_ring_1_17
+    400018: Boxing_ring_1_18
+    400020: Boxing_ring_1_19
+    400022: Boxing_ring_1_2
+    400024: Boxing_ring_1_20
+    400026: Boxing_ring_1_3
+    400028: Boxing_ring_1_4
+    400030: Boxing_ring_1_5
+    400032: Boxing_ring_1_6
+    400034: Boxing_ring_1_7
+    400036: Boxing_ring_1_8
+    400038: Boxing_ring_1_9
+    400040: Light
+    400042: Ring
+    400044: //RootNode
+    2300000: Boxing_ring_1_1
+    2300002: Boxing_ring_1_10
+    2300004: Boxing_ring_1_11
+    2300006: Boxing_ring_1_12
+    2300008: Boxing_ring_1_13
+    2300010: Boxing_ring_1_14
+    2300012: Boxing_ring_1_15
+    2300014: Boxing_ring_1_16
+    2300016: Boxing_ring_1_17
+    2300018: Boxing_ring_1_18
+    2300020: Boxing_ring_1_19
+    2300022: Boxing_ring_1_2
+    2300024: Boxing_ring_1_20
+    2300026: Boxing_ring_1_3
+    2300028: Boxing_ring_1_4
+    2300030: Boxing_ring_1_5
+    2300032: Boxing_ring_1_6
+    2300034: Boxing_ring_1_7
+    2300036: Boxing_ring_1_8
+    2300038: Boxing_ring_1_9
+    2300040: Light
+    3300000: Boxing_ring_1_1
+    3300002: Boxing_ring_1_10
+    3300004: Boxing_ring_1_11
+    3300006: Boxing_ring_1_12
+    3300008: Boxing_ring_1_13
+    3300010: Boxing_ring_1_14
+    3300012: Boxing_ring_1_15
+    3300014: Boxing_ring_1_16
+    3300016: Boxing_ring_1_17
+    3300018: Boxing_ring_1_18
+    3300020: Boxing_ring_1_19
+    3300022: Boxing_ring_1_2
+    3300024: Boxing_ring_1_20
+    3300026: Boxing_ring_1_3
+    3300028: Boxing_ring_1_4
+    3300030: Boxing_ring_1_5
+    3300032: Boxing_ring_1_6
+    3300034: Boxing_ring_1_7
+    3300036: Boxing_ring_1_8
+    3300038: Boxing_ring_1_9
+    3300040: Light
+    4300000: Light
+    4300002: Boxing_ring_1_20
+    4300004: Boxing_ring_1_19
+    4300006: Boxing_ring_1_18
+    4300008: Boxing_ring_1_17
+    4300010: Boxing_ring_1_16
+    4300012: Boxing_ring_1_15
+    4300014: Boxing_ring_1_14
+    4300016: Boxing_ring_1_13
+    4300018: Boxing_ring_1_12
+    4300020: Boxing_ring_1_11
+    4300022: Boxing_ring_1_10
+    4300024: Boxing_ring_1_9
+    4300026: Boxing_ring_1_8
+    4300028: Boxing_ring_1_7
+    4300030: Boxing_ring_1_6
+    4300032: Boxing_ring_1_5
+    4300034: Boxing_ring_1_4
+    4300036: Boxing_ring_1_3
+    4300038: Boxing_ring_1_2
+    4300040: Boxing_ring_1_1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

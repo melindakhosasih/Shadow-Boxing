@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: d3aacbe9431a4b64a9c4c092fac5c0b7
+timeCreated: 1491928758
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: front1
+    100004: pCylinder1
+    100006: pCylinder10
+    100008: pCylinder11
+    100010: pCylinder2
+    100012: pCylinder3
+    100014: pCylinder4
+    100016: pCylinder5
+    100018: pCylinder6
+    100020: pCylinder7
+    100022: pCylinder8
+    100024: pCylinder9
+    100026: polySurface1
+    100028: polySurface1 1
+    100030: polySurface10
+    100032: polySurface2
+    100034: polySurface3
+    100036: polySurface4
+    100038: polySurface6
+    100040: polySurface7
+    100042: polySurface8
+    100044: polySurface8 1
+    100046: polySurface9
+    100048: transform1
+    100050: transform10
+    100052: transform11
+    100054: transform12
+    100056: transform13
+    100058: transform2
+    100060: transform3
+    100062: transform4
+    100064: transform5
+    100066: transform6
+    100068: transform7
+    100070: transform8
+    100072: transform9
+    100074: Boxing_bag_1
+    100076: Boxing_bag_2
+    100078: Gym_assets1
+    100080: Gym_assets2
+    100082: Gym_assets3
+    100084: pCube4
+    100086: pCube5
+    100088: wall_Stand
+    400000: //RootNode
+    400002: front1
+    400004: pCylinder1
+    400006: pCylinder10
+    400008: pCylinder11
+    400010: pCylinder2
+    400012: pCylinder3
+    400014: pCylinder4
+    400016: pCylinder5
+    400018: pCylinder6
+    400020: pCylinder7
+    400022: pCylinder8
+    400024: pCylinder9
+    400026: polySurface1
+    400028: polySurface1 1
+    400030: polySurface10
+    400032: polySurface2
+    400034: polySurface3
+    400036: polySurface4
+    400038: polySurface6
+    400040: polySurface7
+    400042: polySurface8
+    400044: polySurface8 1
+    400046: polySurface9
+    400048: transform1
+    400050: transform10
+    400052: transform11
+    400054: transform12
+    400056: transform13
+    400058: transform2
+    400060: transform3
+    400062: transform4
+    400064: transform5
+    400066: transform6
+    400068: transform7
+    400070: transform8
+    400072: transform9
+    400074: Boxing_bag_1
+    400076: Boxing_bag_2
+    400078: Gym_assets1
+    400080: Gym_assets2
+    400082: Gym_assets3
+    400084: pCube4
+    400086: pCube5
+    400088: wall_Stand
+    2300000: pCylinder10
+    2300002: pCylinder11
+    2300004: pCylinder9
+    2300006: polySurface1
+    2300008: polySurface8
+    2300010: Boxing_bag_1
+    2300012: Boxing_bag_2
+    2300014: Gym_assets1
+    2300016: Gym_assets2
+    2300018: Gym_assets3
+    2300020: wall_Stand
+    3300000: pCylinder10
+    3300002: pCylinder11
+    3300004: pCylinder9
+    3300006: polySurface1
+    3300008: polySurface8
+    3300010: Boxing_bag_1
+    3300012: Boxing_bag_2
+    3300014: Gym_assets1
+    3300016: Gym_assets2
+    3300018: Gym_assets3
+    3300020: wall_Stand
+    4300000: polySurface1
+    4300002: polySurface8
+    4300004: pCylinder9
+    4300006: pCylinder10
+    4300008: pCylinder11
+    4300010: Boxing_bag_2
+    4300012: Boxing_bag_1
+    4300014: Gym_assets1
+    4300016: Gym_assets2
+    4300018: Gym_assets3
+    4300020: wall_Stand
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
