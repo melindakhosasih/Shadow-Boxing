@@ -1,0 +1,102 @@
+{
+    "name": "Quest2Buttons",
+    "maps": [
+        {
+            "name": "LeftHand",
+            "id": "c1638359-1fd5-495a-9211-b877972aff02",
+            "actions": [
+                {
+                    "name": "X",
+                    "type": "Button",
+                    "id": "0e83bc15-bc81-469e-9175-3ed3900135a4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Y",
+                    "type": "Button",
+                    "id": "ab73d4f9-69b5-4803-9c51-e60afe9c56e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d4a3821d-9207-4ca8-9acd-050f80eb621b",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1fd2891-0f1c-43f3-9443-e98c5a11e054",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RightHand",
+            "id": "c72f7d1b-d789-4c93-998d-a8fdeb19b934",
+            "actions": [
+                {
+                    "name": "A",
+                    "type": "Button",
+                    "id": "6afd6ae9-3ae1-489e-a3e7-507411893088",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "4f34d690-f98f-471c-91b8-8d41ba9bb863",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6e90d54e-4786-43f7-b07e-e99b6815264d",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94d75b0b-53ae-4405-99d5-72ca3ca16139",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
