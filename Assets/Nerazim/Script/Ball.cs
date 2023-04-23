@@ -22,7 +22,15 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag == "RightHand")
         {
-            print("Hit");
+            GameObject.FindWithTag("BallMission").GetComponent<BallMission>().HitNumber += 1;
+            print("RightHand Hit");
+            Destroy(this.gameObject);
+        }
+        else if (collision.gameObject.tag == "LeftHand")
+        {
+            GameObject.FindWithTag("BallMission").GetComponent<BallMission>().HitNumber += 1;
+            print("LeftHand Hit");
+            Destroy(this.gameObject);
         }
     }
 }

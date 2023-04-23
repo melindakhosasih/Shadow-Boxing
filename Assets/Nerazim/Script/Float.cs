@@ -6,7 +6,7 @@ public class Float : MonoBehaviour
 {
     private float radian = 0;
 
-    private float perRadian = 0.006f; //速度
+    public float perRadian = 2f; //速度
 
     private float radius = 0.6f; //半徑
 
@@ -20,8 +20,8 @@ public class Float : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        radian += perRadian;
-        float dy = Mathf.Cos(radian) * radius;
+        radian += perRadian*Time.deltaTime;
+        float dy = Mathf.Cos(radian) * radius ;
         transform.position = oldPos + new Vector3(0, dy, 0);
     }
 }
