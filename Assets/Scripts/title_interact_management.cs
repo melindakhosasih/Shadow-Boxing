@@ -16,8 +16,27 @@ public class title_interact_management : MonoBehaviour
         
     }
     
+    /// <summary>
+    /// OnCollisionEnter is called when this collider/rigidbody has begun
+    /// touching another rigidbody/collider.
+    /// </summary>
+    /// <param name="other">The Collision data associated with this collision.</param>
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(other);
+        if(other.gameObject.tag=="LeftHand")
+        {
+            print("Left Hit");
+        }
+        else if(other.gameObject.tag=="RightHand")
+        {
+            print("Right Hit");
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if(other.gameObject.name == "Direct Interactor"){
             Debug.Log("Next Scenes");
         }
