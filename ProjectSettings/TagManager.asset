@@ -11,6 +11,7 @@ TagManager:
   - Enemy_LeftHand
   - Enemy_RightHand
   - Body
+  - Enemy
   layers:
   - Default
   - TransparentFX
