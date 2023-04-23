@@ -14,5 +14,6 @@ public class position : MonoBehaviour
     void Update()
     {
         this.transform.position = new Vector3(this.transform.position.x,0.1f,this.transform.position.z);
+        
     }
 }

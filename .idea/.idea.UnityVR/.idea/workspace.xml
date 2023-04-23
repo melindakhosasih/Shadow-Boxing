@@ -6,9 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_combo_3.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_combo_3.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_head_guard_right.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_head_guard_right.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_hook_right.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_hook_right.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_idle_1 1.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_idle_1 1.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_weaving.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_weaving.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/VR_Box.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/VR_Box.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boxer 7548 Tris.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boxer 7631 Tris.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boxing Gym.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boxing.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Scene/Dodge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Scene/Dodge.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Scene/popUpBall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Scene/popUpBall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Float.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Float.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/DodgeAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/DodgeAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/animator controller/DodgePractice.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/animator controller/DodgePractice.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +33,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Ball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/DodgeAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Float.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/dodge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position2.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,7 +102,7 @@
       <workItem from="1681486717028" duration="473000" />
       <workItem from="1681487196844" duration="657000" />
       <workItem from="1681491812862" duration="696000" />
-      <workItem from="1682231520913" duration="6855000" />
+      <workItem from="1682231520913" duration="16266000" />
     </task>
     <servers />
   </component>
