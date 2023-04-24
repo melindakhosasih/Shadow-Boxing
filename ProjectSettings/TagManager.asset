@@ -7,6 +7,11 @@ TagManager:
   - RightHand
   - LeftHand
   - BallMission
+  - limitArea
+  - Enemy_LeftHand
+  - Enemy_RightHand
+  - Body
+  - Enemy
   layers:
   - Default
   - TransparentFX
