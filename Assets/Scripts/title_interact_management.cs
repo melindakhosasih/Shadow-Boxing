@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class title_interact_management : MonoBehaviour
 {
+    public string nextScene ="Tutorial";
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class title_interact_management : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if(other.gameObject.name == "Direct Interactor"){
             Debug.Log("Next Scenes");
+            SceneManager.LoadScene(nextScene);
         }
     }
 }
