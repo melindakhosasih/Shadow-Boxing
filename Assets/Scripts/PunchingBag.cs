@@ -5,6 +5,7 @@ using UnityEngine;
 public class PunchingBag : MonoBehaviour
 {
     public AudioClip punchAudioClip;
+    public GameObject [] steps;
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
