@@ -12,6 +12,8 @@ TagManager:
   - Enemy_RightHand
   - Body
   - Enemy
+  - Circle
+  - EventSystem
   layers:
   - Default
   - TransparentFX
