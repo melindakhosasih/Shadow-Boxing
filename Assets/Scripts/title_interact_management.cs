@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class title_interact_management : MonoBehaviour
 {
@@ -40,8 +39,8 @@ public class title_interact_management : MonoBehaviour
     {
         Debug.Log(other.gameObject.name);
         if(other.gameObject.name == "Direct Interactor"){
-            Debug.Log("Next Scenes");
-            SceneManager.LoadScene(nextScene);
+            //Debug.Log("Next Scenes");
+            GameObject.Find("script").GetComponent<changescene>().change(nextScene);
         }
     }
 }
