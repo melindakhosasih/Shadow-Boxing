@@ -18,9 +18,9 @@ public class new_Tutorial : MonoBehaviour
     public int HitNumber = 0;
 
     public int step = 0;
-    public int sub_step = 0;
+    public int sub_step = 0;//按鍵說明，預設按下A繼續
     public int mission_complete_number = 0;
-    string title1 = "按鍵教學";
+    string title1 = "按鍵說明";
     
     string title2 = "基本教學:";
     string mission1 = "移動訓練:移動到圈圈裡面";
@@ -28,7 +28,8 @@ public class new_Tutorial : MonoBehaviour
     string mission3 = "打擊訓練:擊中漂浮的球球";
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        sub_step = 0;
         Mission1_Complete = false;
         Mission2_Complete = false;
         Mission3_Complete = false;
@@ -41,14 +42,33 @@ public class new_Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (step == 0)
         {
-            UI.gameObject.GetComponent<Text>().text = title1;
-            UI2.gameObject.GetComponent<Text>().text = "Welcome!";
-            
-            step = step + 1;
-            
-            
+            if (sub_step == 0)
+            {
+                UI.gameObject.GetComponent<Text>().text = "歡迎來到Shadow Boxing! ";
+                UI2.gameObject.GetComponent<Text>().text =  "       (press A....)";
+            }
+            if (sub_step == 1)
+            {
+                UI.gameObject.GetComponent<Text>().text = "接下來開始說明按鍵操作";
+                UI2.gameObject.GetComponent<Text>().text = "        (press A....)";
+            }
+            else if (sub_step == 2)
+            {
+                UI.gameObject.GetComponent<Text>().text = "在遊戲中可以透過連續按下兩次B鍵跳過教學 ";
+                UI2.gameObject.GetComponent<Text>().text = "        (press A....)";
+            }
+            else if (sub_step == 3)
+            {
+                UI.gameObject.GetComponent<Text>().text = "那麼接下來開始簡單的操作教學 ";
+                UI2.gameObject.GetComponent<Text>().text = "        (press A....)";
+            }
+            if (sub_step == 4)
+            {
+                step = step + 1;
+            }
         }
         else if (step == 1)
         {
