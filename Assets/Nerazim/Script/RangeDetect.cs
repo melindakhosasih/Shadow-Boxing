@@ -16,7 +16,7 @@ public class RangeDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((this.transform.position.z>1.4f)&&(this.transform.position.z<4f)&&(this.transform.position.x<0.1f)&&(this.transform.position.x>-2.6f))
+        if((this.transform.position.z>-2.2f)&&(this.transform.position.z<0.24f)&&(this.transform.position.x<0.55f)&&(this.transform.position.x>-1.5f))
         {
             circle1.SetActive(true);
             circle2.SetActive(false);

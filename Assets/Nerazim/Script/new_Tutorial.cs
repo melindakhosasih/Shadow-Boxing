@@ -22,7 +22,7 @@ public class new_Tutorial : MonoBehaviour
     public int mission_complete_number = 0;
     string title1 = "按鍵教學";
     
-    string title2 = "基本訓練:";
+    string title2 = "基本教學:";
     string mission1 = "移動訓練:移動到圈圈裡面";
     string mission2 = "打擊訓練:擊中固定的球球";
     string mission3 = "打擊訓練:擊中漂浮的球球";

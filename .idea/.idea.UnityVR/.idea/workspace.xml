@@ -6,17 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boxer 7548 Tris.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boxer 7631 Tris.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boxing Gym.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Boxing.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Prefab/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Prefab/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Prefab/ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Prefab/ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.1/Starter Assets/Prefabs/XR Origin Pieces/XR Controller Left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.1/Starter Assets/Prefabs/XR Origin Pieces/XR Controller Left.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.1/Starter Assets/Prefabs/XR Origin Pieces/XR Controller Right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.1/Starter Assets/Prefabs/XR Origin Pieces/XR Controller Right.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Scene/Dodge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Scene/Dodge.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mainsceen/play.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mainsceen/play.mat.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,8 @@
       <workItem from="1681487196844" duration="657000" />
       <workItem from="1681491812862" duration="696000" />
       <workItem from="1682231520913" duration="17615000" />
-      <workItem from="1682920652372" duration="5891000" />
+      <workItem from="1682920652372" duration="6533000" />
+      <workItem from="1683286221707" duration="1925000" />
     </task>
     <servers />
   </component>
