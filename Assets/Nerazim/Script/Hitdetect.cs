@@ -26,7 +26,7 @@ public class Hitdetect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        print("Hit body");
         if (other.transform.tag == "Body")
         {
             GameObject.FindWithTag("Enemy").GetComponent<DodgeAnimator>().gotHit = true;
@@ -37,7 +37,7 @@ public class Hitdetect : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       
+        print("Hit body");
         if (collision.transform.tag == "Body")
         {
             GameObject.FindWithTag("Enemy").GetComponent<DodgeAnimator>().gotHit = true;
