@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class fade : MonoBehaviour
 {
+
     private Image image;
     // Start is called before the first frame update
     void Start()

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class title_interact_management : MonoBehaviour
 {
+    [SerializeField] private Transform shatterTransform;
+    public Camera firstPersonCamera;
+    public Camera overheadCamera;
+
     public string nextScene ="Tutorial";
     // Start is called before the first frame update
     void Start()
@@ -17,11 +21,6 @@ public class title_interact_management : MonoBehaviour
         
     }
     
-    /// <summary>
-    /// OnCollisionEnter is called when this collider/rigidbody has begun
-    /// touching another rigidbody/collider.
-    /// </summary>
-    /// <param name="other">The Collision data associated with this collision.</param>
     void OnCollisionEnter(Collision other)
     {
         Debug.Log(other);
@@ -37,10 +36,11 @@ public class title_interact_management : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if(other.gameObject.name == "Direct Interactor"){
-            //Debug.Log("Next Scenes");
-            GameObject.Find("script").GetComponent<changescene>().change(nextScene);
+            shatterTransform.gameObject.SetActive(true);
+            firstPersonCamera.enabled = false;
+            overheadCamera.enabled = true;
+            //GameObject.Find("script").GetComponent<changescene>().change(nextScene);
         }
     }
 }
