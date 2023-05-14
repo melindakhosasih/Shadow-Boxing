@@ -2,39 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class Test : MonoBehaviour //如果不是出招，就是等待3-5秒
 {
     private Animation animationComponent;
-    public string[] nextAnimationLists;
+    public string[] attackLists;
     public int ListNum;
     private string nextAnimationName = "None";
     private bool isPlaying = false;
     private int move = 0;
     private float prev_time = 0;
+    private float waitingTime = 3f;
+    private float waitingTime_ = 5f;
     void Start()
     {
         animationComponent = GetComponent<Animation>();
+        ListNum = attackLists.Length;
         prev_time = Time.time;
     }
 
     void Update()
-    {
-        if (Time.time - prev_time >= 5f)
+    {   
+        float i = UnityEngine.Random.Range(waitingTime,waitingTime_);//出招時間
+        print(nextAnimationName);
+        PlayAnimation(nextAnimationName);
+        if (!isPlaying)
         {
-            
-            animationComponent.Play("Combo");
-            
+            nextAnimationName = decideNextAnimation();
         }
-        else
-        {
-            animationComponent.Play("Waiting");
-        }
-
-        if (Time.time - prev_time >= 8f)
-        {
-            prev_time = Time.time;
-        }
-        
     }
 
     void PlayAnimation(string animationName)
@@ -48,11 +42,14 @@ public class Test : MonoBehaviour
         animationComponent.Play(animationName);
 
         isPlaying = true;
-
-        nextAnimationName = nextAnimationLists[move];
-        move = (move + 1) % ListNum;
     }
 
+    string decideNextAnimation()
+    {
+        string nextAnimation = attackLists[move];
+        move = (move + 1) % ListNum;
+        return nextAnimation;
+    }
     void AnimationComplete()
     {
         isPlaying = false;

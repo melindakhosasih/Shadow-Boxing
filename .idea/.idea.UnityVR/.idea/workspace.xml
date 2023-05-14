@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/EventSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/EventSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTutorial.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTutorial.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_strafe_left.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_strafe_left.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_strafe_right.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Boxer_7631tris/models/animations_separated/BB_strafe_right.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Scene/TestAnimation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Scene/TestAnimation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/dodge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial_circle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,6 +98,7 @@
       <workItem from="1682231520913" duration="17615000" />
       <workItem from="1682920652372" duration="6533000" />
       <workItem from="1683286221707" duration="8388000" />
+      <workItem from="1684065450380" duration="9889000" />
     </task>
     <servers />
   </component>
