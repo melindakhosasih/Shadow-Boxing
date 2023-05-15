@@ -37,7 +37,7 @@ public class title_interact_management : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "Direct Interactor"){
-            shatterTransform.gameObject.SetActive(true);
+            //shatterTransform.gameObject.SetActive(true);
             firstPersonCamera.enabled = false;
             overheadCamera.enabled = true;
             Invoke("change", 0.5f);

@@ -22,7 +22,7 @@ public class titleanimation : MonoBehaviour
     {
         while(true){
             if(dilate < -0.19 || dilate > 0.63f) changedilate = -changedilate;
-            this.tmp.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, dilate);
+            tmp.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, dilate);
             dilate += changedilate;
             yield return new WaitForSeconds(0.01f);
         }
