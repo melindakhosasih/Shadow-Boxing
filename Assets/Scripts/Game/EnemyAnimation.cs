@@ -21,4 +21,8 @@ public class EnemyAnimation : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter(Collision collider) {
+        
+    }
 }
