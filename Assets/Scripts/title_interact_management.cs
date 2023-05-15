@@ -40,7 +40,11 @@ public class title_interact_management : MonoBehaviour
             shatterTransform.gameObject.SetActive(true);
             firstPersonCamera.enabled = false;
             overheadCamera.enabled = true;
-            //GameObject.Find("script").GetComponent<changescene>().change(nextScene);
+            Invoke("change", 0.5f);
         }
+    }
+    void change(){
+        GameObject.Find("script").GetComponent<changescene>().change(nextScene);
+        CancelInvoke("change");
     }
 }

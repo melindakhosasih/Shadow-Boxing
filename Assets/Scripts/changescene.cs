@@ -16,7 +16,7 @@ public class changescene : MonoBehaviour
     public void change(string scene){
         nextscene = scene;
         this.GetComponent<fade>().scenefadeout(1f, 0.01f);
-        Invoke("next", 0.8f);
+        Invoke("next", 4f);
     }
 
     void next(){
