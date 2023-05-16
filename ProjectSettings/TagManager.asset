@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - Circle
   - EventSystem
+  - GuardBlock
   layers:
   - Default
   - TransparentFX

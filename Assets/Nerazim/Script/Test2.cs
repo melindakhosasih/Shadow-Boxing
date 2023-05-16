@@ -8,9 +8,15 @@ public class Test2 : MonoBehaviour
     
     public string [] attackLists;
 
+    public string[] defendLists;
+
     private int ListNum;
 
+    private int defListNum;
+
     private string attackAni;
+
+    private string defendAni;
 
     private bool canHit;
 
@@ -19,29 +25,45 @@ public class Test2 : MonoBehaviour
     private float atkCooldown = 5f;
 
     public bool move = false;
+
+    public bool playerHit = false;
+
+    public GameObject playerBody;
     // Start is called before the first frame update
     void Start()
     {
         ani = GetComponent<Animation>();
         canHit = false;
         ListNum = attackLists.Length;
+        defListNum = defendLists.Length;
         prev_time = Time.time;
         move = false;
+        playerHit = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (canHit)
+
+        if (playerHit)
         {
-            attackAni = selectNextAnimation();
+            playerHit = false;
+            defendAni = selectNextAnimation("def");
+            playAnimation(defendAni);
+            if (defendAni == "Dodge")
+            {
+                defendAni = "Waiting";
+            }
+        }
+        else if (canHit)
+        {
+            attackAni = selectNextAnimation("atk");
             playAnimation(attackAni);
         }
         else
         {
             
-            playAnimation("Waiting");
+            playAnimation(defendAni);
         }
         
         
@@ -60,13 +82,15 @@ public class Test2 : MonoBehaviour
         }
 
         ani.Play(action);
-        if (action == "Waiting")
+        if (((action == "Waiting")||(action == "Dodge"))||(action=="Guard"))
         {
             this.GetComponent<Test2_move>().hitAniPlay = false;
+            playerBody.SetActive(false);
         }
         else
         {
             this.GetComponent<Test2_move>().hitAniPlay = true;
+            playerBody.SetActive(true);
         }
         
         if (action == "HookRight")
@@ -87,10 +111,20 @@ public class Test2 : MonoBehaviour
         }
         canHit = false;
     }
-    string selectNextAnimation()
+    string selectNextAnimation(string type)
     {
-        int rand = Random.Range(0,ListNum);
-        return attackLists[rand];
+        if (type == "atk")
+        {
+            int rand = Random.Range(0,ListNum);
+            return attackLists[rand];
+        }
+        else if (type == "def")
+        {
+            int rand = Random.Range(0,defListNum);
+            return defendLists[rand];
+        }
+
+        return "Waiting";
     }
     
     
