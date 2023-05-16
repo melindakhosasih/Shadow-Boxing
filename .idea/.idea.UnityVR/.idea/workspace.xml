@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Scene/Dodge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Scene/Dodge.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mainsceen/play.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mainsceen/play.mat.meta" afterDir="false" />
-    </list>
+    <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +14,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Ball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/DodgeAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Float.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/HandAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Hitdetect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/RangeDetect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_HitDetect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/dodge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial_circle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" root0="FORCE_HIGHLIGHTING" />
@@ -95,7 +91,8 @@
       <workItem from="1681491812862" duration="696000" />
       <workItem from="1682231520913" duration="17615000" />
       <workItem from="1682920652372" duration="6533000" />
-      <workItem from="1683286221707" duration="1925000" />
+      <workItem from="1683286221707" duration="8388000" />
+      <workItem from="1684065450380" duration="10766000" />
     </task>
     <servers />
   </component>

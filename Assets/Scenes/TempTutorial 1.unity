@@ -15753,6 +15753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541370415}
   - component: {fileID: 541370414}
+  - component: {fileID: 541370416}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: EventSystem
@@ -15801,6 +15802,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541370416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541370413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23524a26f3ee29e4292b724ee40f5670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &616012121
 GameObject:
   m_ObjectHideFlags: 0
@@ -21321,8 +21334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 147.05, y: 0}
-  m_SizeDelta: {x: 294.1, y: 0}
+  m_AnchoredPosition: {x: 174.7409, y: -12.7149}
+  m_SizeDelta: {x: 349.4818, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180943495
 MonoBehaviour:
@@ -46140,10 +46153,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -46151,7 +46164,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u57FA\u672C\u6559\u5B78 : (0/3)"
+  m_Text: "\u6B61\u8FCE\u4F86\u5230Shadow Boxing!"
 --- !u!222 &1510543376
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46813,8 +46826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 174.7409, y: 0}
+  m_SizeDelta: {x: 98, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1818855546
 GameObject:
@@ -91673,6 +91686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3127728407321059612}
   - component: {fileID: 3127728407321059615}
+  - component: {fileID: 3127728407321059616}
   m_Layer: 0
   m_Name: Input Action Manager
   m_TagString: Untagged
@@ -91694,6 +91708,125 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - {fileID: -944628639613478452, guid: 1070abaff3d2e654a89b5357e6cde7ff, type: 3}
+--- !u!114 &3127728407321059616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127728407321059614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1070abaff3d2e654a89b5357e6cde7ff, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 541370416}
+        m_TargetAssemblyTypeName: HandAction, Assembly-CSharp
+        m_MethodName: XbuttonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0e83bc15-bc81-469e-9175-3ed3900135a4
+    m_ActionName: LeftHand/X
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 541370416}
+        m_TargetAssemblyTypeName: HandAction, Assembly-CSharp
+        m_MethodName: YbuttonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ab73d4f9-69b5-4803-9c51-e60afe9c56e9
+    m_ActionName: LeftHand/Y
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 541370416}
+        m_TargetAssemblyTypeName: HandAction, Assembly-CSharp
+        m_MethodName: AbuttonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6afd6ae9-3ae1-489e-a3e7-507411893088
+    m_ActionName: RightHand/A
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 541370416}
+        m_TargetAssemblyTypeName: HandAction, Assembly-CSharp
+        m_MethodName: BbuttonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4f34d690-f98f-471c-91b8-8d41ba9bb863
+    m_ActionName: RightHand/B
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: LeftHand
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &3127728407948330384
 MonoBehaviour:
   m_ObjectHideFlags: 0
