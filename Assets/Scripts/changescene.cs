@@ -14,13 +14,14 @@ public class changescene : MonoBehaviour
 
 
     public void change(string scene){
-        global.prescene = scene;
+
         nextscene = scene;
         this.GetComponent<fade>().scenefadeout(1f, 0.01f);
         Invoke("next", 4f);
     }
 
     void next(){
+        global.prescene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(nextscene);
         CancelInvoke("next");
     }
