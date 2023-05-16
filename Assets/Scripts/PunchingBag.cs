@@ -19,8 +19,9 @@ public class PunchingBag : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other) {
-        print("collide punching bag sound");
+    void OnCollisionEnter(Collision collider) {
+        // print("collide punching bag sound");
+        // print(collider.other.tag);
         audioSource.clip = punchAudioClip;
         audioSource.Play();
     }
