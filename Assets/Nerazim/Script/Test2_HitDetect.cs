@@ -26,7 +26,7 @@ public class Test2_HitDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rawImage.color =  Color.Lerp(rawImage.color, Color.clear, Time.deltaTime * fadeSpeed * 0.5f);
+        //rawImage.color =  Color.Lerp(rawImage.color, Color.clear, Time.deltaTime * fadeSpeed * 0.5f);
         if (bodyDisappear)
         {
             if (Time.time - prev_time >= 1f)

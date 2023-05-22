@@ -15,6 +15,10 @@ TagManager:
   - Circle
   - EventSystem
   - GuardBlock
+  - system
+  - time_button
+  - hp_button
+  - start_button
   layers:
   - Default
   - TransparentFX

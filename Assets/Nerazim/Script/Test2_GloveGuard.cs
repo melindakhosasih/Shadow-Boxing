@@ -14,7 +14,7 @@ public class Test2_GloveGuard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(this.transform.localEulerAngles.z );
+        //print(this.transform.localEulerAngles.z );
         if ((this.transform.localEulerAngles.z > 70) && (this.transform.localEulerAngles.z < 110))
         {
             Guardblock.SetActive(true);

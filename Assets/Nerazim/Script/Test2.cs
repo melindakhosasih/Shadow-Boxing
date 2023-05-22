@@ -44,7 +44,7 @@ public class Test2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //print(defendAni);
         if (playerHit)
         {
             playerHit = false;
