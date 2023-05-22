@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit_Detection : MonoBehaviour
+public class hitDetection : MonoBehaviour
 {
     void Start()
     {

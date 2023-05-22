@@ -14,8 +14,17 @@ TagManager:
   - Enemy
   - Circle
   - EventSystem
-  - Enemy_RightHand_Inactive
   - Enemy_LeftHand_Inactive
+  - Inactive
+  - Enemy_RightHand_Inactive
+  - RightJabBlock
+  - LeftJabBlock
+  - RightHookBlock
+  - LeftHookBlock
+  - LeftHook
+  - RightHook
+  - RightJab
+  - LeftJab
   layers:
   - Default
   - TransparentFX
