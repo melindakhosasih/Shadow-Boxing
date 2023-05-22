@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         timeString.text = getTime(curTime);
 
         if (gameOver) {
-            changeScene("Game");
+            changeScene("Tutorial");
         }
     }
 
@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
     }
 
     void changeScene(string scene) {
+        global.prescene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(scene);
     }
 
