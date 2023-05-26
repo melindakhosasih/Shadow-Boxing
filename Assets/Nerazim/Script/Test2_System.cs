@@ -23,6 +23,8 @@ public class Test2_System : MonoBehaviour
 
     public int round_time = 180;
     public bool useHP = false;
+
+    public string difficulity = "Easy";
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class Test2_System : MonoBehaviour
         enemy.transform.position = new Vector3(1000,10000,1000);
         reset = false;
         round_time = 180;
+        difficulity = "Easy";
     }
 
     // Update is called once per frame
@@ -52,12 +55,13 @@ public class Test2_System : MonoBehaviour
     {
         if (GameStart)
         {
-            resetPosition();
+            
             settingBoard.SetActive(false);
             scoreBoard.SetActive(true);
             scoreBoard.GetComponent<Test2_ScoreBoard>().startTime = Time.time;
             enemy.SetActive(true);
-            
+            resetPosition();
+            difficulitySetting();
         }
         else
         {
@@ -71,5 +75,27 @@ public class Test2_System : MonoBehaviour
     {
         enemy.transform.position = new Vector3(0,0,1.541f);
         
+    }
+
+    void difficulitySetting()
+    {
+        if (difficulity == "Easy")
+        {
+            GameObject T = GameObject.FindWithTag("Enemy");
+            T.GetComponent<Test2>().qHitCooldown = 7f;
+            T.GetComponent<Test2>().sHitCooldown = 7f;
+        }
+        else if (difficulity == "Medium")
+        {
+            GameObject T = GameObject.FindWithTag("Enemy");
+            T.GetComponent<Test2>().qHitCooldown = 5f;
+            T.GetComponent<Test2>().sHitCooldown = 4f;
+        }
+        else if (difficulity == "Hard")
+        {
+            GameObject T = GameObject.FindWithTag("Enemy");
+            T.GetComponent<Test2>().qHitCooldown = 4f;
+            T.GetComponent<Test2>().sHitCooldown = 2f;
+        }
     }
 }

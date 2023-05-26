@@ -24,6 +24,9 @@ public class Test2 : MonoBehaviour
 
     private float atkCooldown = 5f;
 
+    public float qHitCooldown = 2f;
+
+    public float sHitCooldown = 5f;
     public bool move = false;
 
     public bool playerHit = false;
@@ -95,19 +98,19 @@ public class Test2 : MonoBehaviour
         
         if (action == "HookRight")
         {
-            atkCooldown = 2f;
+            atkCooldown = qHitCooldown;
         }
         else if (action == "Combo")
         {
-            atkCooldown = 5f;
+            atkCooldown = sHitCooldown;
         }
         else if (action == "Hook_Left")
         {
-            atkCooldown = 2f;
+            atkCooldown = qHitCooldown;
         }
         else if (action == "Jab_Right")
         {
-            atkCooldown = 1.5f;
+            atkCooldown = qHitCooldown-0.5f;
         }
         canHit = false;
     }
