@@ -10,16 +10,6 @@ public class title_interact_management : MonoBehaviour
 
     public string nextScene ="Tutorial";
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     void OnCollisionEnter(Collision other)
     {

@@ -73,7 +73,7 @@ public class Test2_System : MonoBehaviour
 
     void resetPosition()
     {
-        enemy.transform.position = new Vector3(0,0,1.541f);
+        enemy.transform.position = new Vector3(0,1.6f,1.541f);
         
     }
 
