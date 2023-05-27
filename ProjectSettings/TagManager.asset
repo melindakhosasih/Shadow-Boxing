@@ -19,6 +19,7 @@ TagManager:
   - time_button
   - hp_button
   - start_button
+  - difficulity_button
   layers:
   - Default
   - TransparentFX

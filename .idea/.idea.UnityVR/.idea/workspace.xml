@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_System.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_System.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TempTutorial 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/title/setting/settingskybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/title/setting/settingskybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new_Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new_Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new_tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new_tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_HitDetect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_ScoreBoard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_Startbuttom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_difficulity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_time.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,6 +41,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial_circle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/video_Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/changescene.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,7 +111,8 @@
       <workItem from="1682920652372" duration="6533000" />
       <workItem from="1683286221707" duration="8388000" />
       <workItem from="1684065450380" duration="21421000" />
-      <workItem from="1684738741044" duration="25808000" />
+      <workItem from="1684738741044" duration="27599000" />
+      <workItem from="1685176225163" duration="3948000" />
     </task>
     <servers />
   </component>
