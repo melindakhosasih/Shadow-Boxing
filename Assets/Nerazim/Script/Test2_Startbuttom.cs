@@ -48,6 +48,14 @@ public class Test2_Startbuttom : MonoBehaviour
             {
                 GameObject.FindWithTag("system").GetComponent<Test2_System>().GameStart = true;
                 GameObject.FindWithTag("system").GetComponent<Test2_System>().reset = true;
+                if (collision.transform.tag == "LeftHand")
+                {
+                    GameObject.FindWithTag("system").GetComponent<shock>().leftHandShock();
+                }
+                else if (collision.transform.tag == "RightHand")
+                {
+                    GameObject.FindWithTag("system").GetComponent<shock>().rightHandShock();
+                }
             }
             if ((this.transform.tag == "hp_button"))
             {
@@ -81,6 +89,14 @@ public class Test2_Startbuttom : MonoBehaviour
             {
                 GameObject.FindWithTag("system").GetComponent<Test2_System>().GameStart = true;
                 GameObject.FindWithTag("system").GetComponent<Test2_System>().reset = true;
+                if (other.transform.tag == "LeftHand")
+                {
+                    GameObject.FindWithTag("system").GetComponent<shock>().leftHandShock();
+                }
+                else if (other.transform.tag == "RightHand")
+                {
+                    GameObject.FindWithTag("system").GetComponent<shock>().rightHandShock();
+                }
             }
             else if ((this.transform.tag == "hp_button")&&(canChange))
             {

@@ -46,6 +46,7 @@ public class Test2_HP : MonoBehaviour
         {
             if (canChange)
             {
+                
                 prev_time = Time.time;
                 canChange = false;
                 useHP = !useHP;
@@ -59,6 +60,14 @@ public class Test2_HP : MonoBehaviour
         {
             if (canChange)
             {
+                if (collision.transform.tag == "LeftHand")
+                {
+                    GameObject.FindWithTag("system").GetComponent<shock>().leftHandShock();
+                }
+                else if (collision.transform.tag == "RightHand")
+                {
+                    GameObject.FindWithTag("system").GetComponent<shock>().rightHandShock();
+                }
                 prev_time = Time.time;
                 canChange = false;
                 useHP = !useHP;
