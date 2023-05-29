@@ -81,12 +81,12 @@ public class Test2_ScoreBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(roundTime);
+        // print(roundTime);
         GameStart = GameObject.FindWithTag("system").GetComponent<Test2_System>().GameStart;
         endGame = GameObject.FindWithTag("system").GetComponent<Test2_System>().endGame;
-        Text_Round.gameObject.GetComponent<TextMeshPro>().text = "Round : " + Roundnum;
+        Text_Round.gameObject.GetComponent<TextMeshPro>().text = "Round " + Roundnum;
         Text_Time.gameObject.GetComponent<TextMeshPro>().text = "Time : 0" + Remain_min + " : " + Remain_sec;
-        Text_Score.gameObject.GetComponent<TextMeshPro>().text = "Score : " + Score;
+        // Text_Score.gameObject.GetComponent<TextMeshPro>().text = "Score : " + Score;
         
         if (GameStart == true)
         {
