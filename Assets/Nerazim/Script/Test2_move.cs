@@ -9,24 +9,62 @@ public class Test2_move : MonoBehaviour
     private Vector2 v2Target;
     private Vector2 v2;
     private float distance;
-
+    
     public bool hitAniPlay = false;
+
+    public bool restart = false;//重製回原始位置
+
+    public bool Game_start = false;
     // Start is called before the first frame update
     void Start()
     {
         hitAniPlay = false;
         ani = GetComponent<Animation>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        LookAtPlayer();
-        if (!hitAniPlay)
+        Game_start = GameObject.FindWithTag("system").GetComponent<Test2_System>().GameStart;
+        if (Game_start)
         {
-            MoveToPlayer();
+            canMove();
+            LookAtPlayer();
+            if (!hitAniPlay)
+            {
+                MoveToPlayer();
+            }
+        }
+        else
+        {
+            playAnimation("Waiting");
+            dontMove();
         }
         
+        if (restart)
+        {
+            restart = false;
+        }
+    }
+
+    void dontMove()
+    {
+        this.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX |
+            RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+        this.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | 
+                                                               RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+    }
+
+    void canMove()
+    {
+        this.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+    }
+    void resetPosition()
+    {
+        this.transform.position = new Vector3(0,0,1.541f);
+        this.transform.rotation = new Quaternion(0, 1, 0, 0);
     }
     void playAnimation(string action)
     {

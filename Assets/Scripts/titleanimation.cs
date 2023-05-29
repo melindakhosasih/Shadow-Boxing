@@ -16,6 +16,7 @@ public class titleanimation : MonoBehaviour
         dilate = -0.19f;
         changedilate=0.1f;
         StartCoroutine(punch());
+        
     }
 
     IEnumerator punch()

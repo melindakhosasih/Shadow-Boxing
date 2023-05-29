@@ -9,19 +9,32 @@ public class Test2_HitDetect : MonoBehaviour
     public float fadeSpeed = 1;
     private float imageAlpha = 20f;
     public RectTransform rectTransform;
-   
+
+    public GameObject PlayerBody;
+
+    private bool bodyDisappear = false;
+
+    private float prev_time;
     // Start is called before the first frame update
     void Start()
     {
     
         rectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+        bodyDisappear = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rawImage.color =  Color.Lerp(rawImage.color, Color.clear, Time.deltaTime * fadeSpeed * 0.5f);
-        
+        //rawImage.color =  Color.Lerp(rawImage.color, Color.clear, Time.deltaTime * fadeSpeed * 0.5f);
+        if (bodyDisappear)
+        {
+            if (Time.time - prev_time >= 1f)
+            {
+                bodyDisappear = false;
+                PlayerBody.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +46,13 @@ public class Test2_HitDetect : MonoBehaviour
             print("Hit Body");
             rawImage.color = Color.red;
         }
+        else if (other.transform.tag == "GuardBlock")
+        {
+            
+            PlayerBody.SetActive(false);
+            bodyDisappear = true;
+            prev_time = Time.time;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -43,6 +63,12 @@ public class Test2_HitDetect : MonoBehaviour
             
             print("Hit Body");
             rawImage.color = Color.red;
+        }
+        else if (collision.transform.tag == "Body")
+        {
+            bodyDisappear = true;
+            PlayerBody.SetActive(false);
+            prev_time = Time.time;
         }
     }
 }

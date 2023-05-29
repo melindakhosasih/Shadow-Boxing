@@ -1,0 +1,489 @@
+[33mcommit 83d200100ee47f4a52fd57566f5e2eaa6b5e9bee[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: e80de2cc 751f7e12
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Mon May 22 20:48:32 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing
+
+[33mcommit e80de2cc5941c1f2250af3f05bdbc1f04d0e136e[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Mon May 22 20:48:25 2023 +0800
+
+    add 0522
+
+[33mcommit 751f7e12f229fae65af762262ad87e4f9ed5f989[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon May 22 18:58:19 2023 +0800
+
+    audio
+
+[33mcommit 7f006426cdaec68d33538e09182c9cff8471f53b[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon May 22 18:51:11 2023 +0800
+
+    audio
+
+[33mcommit c36107c42855248208c3d92eb3fbc8e965c9c0cd[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Sun May 21 18:57:21 2023 +0800
+
+    settgin change
+
+[33mcommit d047085dcf7546418a0ebb55b32714f48ae45142[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Sun May 21 17:10:03 2023 +0800
+
+    settgin change
+
+[33mcommit 1af28f13c55ba8d7556dc16ca64f2d6efac493ce[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Fri May 19 22:26:36 2023 +0800
+
+    add prefabs and fix avatars
+
+[33mcommit c4db0ff898e2b6c5ad06473a0e574d3344463625[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Fri May 19 18:29:35 2023 +0800
+
+    change XR setting and add Final IK assets
+
+[33mcommit 52ff46f73fa6577f6183a73c3376a46bfd72c0e9[m
+Merge: 97a2e49d 3cfcd5ce
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Tue May 16 22:07:41 2023 +0800
+
+    new
+
+[33mcommit 97a2e49d19c0a8858cbce72fe29cb7162e0f76f7[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Tue May 16 22:01:36 2023 +0800
+
+    new
+
+[33mcommit 3cfcd5ceae3d5b85229c5147d7a062d9828d9dd2[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Tue May 16 12:32:04 2023 +0800
+
+    changescenememory
+
+[33mcommit ba9ea011004412be6bb7dcd00c203b3e7bf8bbb6[m
+Merge: 2a318faa 9cd0a6ae
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Tue May 16 11:43:46 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing into main
+
+[33mcommit 2a318faa94ca2706b67b40401176f42f5290270b[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Tue May 16 11:39:23 2023 +0800
+
+    globalsetting
+
+[33mcommit 9cd0a6ae0b20d1e72262a455a47775e81939e547[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Mon May 15 22:06:48 2023 +0800
+
+    change plane position
+
+[33mcommit 86b3f398c80e7003d6488c71706cfe2d9981f7c7[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Mon May 15 21:58:27 2023 +0800
+
+    add score and time
+
+[33mcommit da3d0b80c79e70cf2f26419ed7cda08f8710f989[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon May 15 18:12:04 2023 +0800
+
+    setting
+
+[33mcommit a9935bad76ac44d6e35f25b107393b8f1a7a1498[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon May 15 14:35:22 2023 +0800
+
+    screen shatter
+
+[33mcommit 2bd54b346c9ee296ea8b9fc01032c37d5d57827b[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon May 15 01:37:09 2023 +0800
+
+    tittleScreenShatter
+
+[33mcommit 477842ed7e69f5cc2415bb7c4331da296ac1a791[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun May 14 23:30:59 2023 +0800
+
+    add enemy
+
+[33mcommit 0801ac2eebef7b076e3402b5475584d823d290b6[m
+Merge: 6fc4f939 931c6d6d
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun May 14 23:06:56 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing
+
+[33mcommit 6fc4f93901b27a831a1444ce80bcc95d162a7586[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun May 14 23:06:20 2023 +0800
+
+    add enemy
+
+[33mcommit 931c6d6d713f9fa74f78dcd3be5bc66f3b3c1a02[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sat May 13 21:24:01 2023 +0800
+
+    update animator
+
+[33mcommit e19d8bc8036e567694d02a4854726cdd01fb02cd[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sat May 13 21:14:45 2023 +0800
+
+    add animations
+
+[33mcommit f4b3de5379ddc636fb5ba5d963b1d8dc5016d590[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sat May 13 20:27:42 2023 +0800
+
+    add model
+
+[33mcommit efde3db2e639c8cddcad3e5eccb77384a96732a7[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Fri May 5 21:53:19 2023 +0800
+
+    add test
+
+[33mcommit 6d05efa3cf9cb7543c963ffe38eb43dd5b0ef7b1[m
+Merge: eaa6a68d a32f012a
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri May 5 20:16:09 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing into main
+
+[33mcommit eaa6a68df9bba17912d04d78fe40af33521e1d9b[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri May 5 20:15:53 2023 +0800
+
+    fadeout
+
+[33mcommit a32f012a3cb54ad107e97a585fe99bd895ff9dd3[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Fri May 5 20:10:09 2023 +0800
+
+    dodge scene
+
+[33mcommit 114adc63fc643bfafeec1638ddfefb11fde9c1bf[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Thu May 4 08:14:40 2023 +0800
+
+    fadein
+
+[33mcommit dfc0f27e0d9c7fd6496def9308048b1ef19b80dc[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Mon May 1 16:02:30 2023 +0800
+
+    add tutorial
+
+[33mcommit 8779ffc6ffa22c0b2cff69d36725a3ec66600a2e[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Mon May 1 14:37:53 2023 +0800
+
+    update animator state
+
+[33mcommit 2b437fbfae66dff82269cede5992d17bc17ec505[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Mon May 1 14:35:08 2023 +0800
+
+    add idle and jabbing animation
+
+[33mcommit 478e3ada82ffd43ecd08cd88afaf9f3586e8209f[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Mon May 1 11:39:07 2023 +0800
+
+    add game scene
+
+[33mcommit 960aee9b24963f105630a83a526e4e2a8555e908[m
+Merge: 0ddfe7e4 154b7f73
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 28 21:54:28 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing into main
+
+[33mcommit 0ddfe7e4e6e26a32cae47fb6fb94b05ae881d644[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 28 21:43:21 2023 +0800
+
+    main scene
+
+[33mcommit 154b7f73ae240235493a354c749a76ec10496ea4[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Fri Apr 28 20:22:07 2023 +0800
+
+    change title controller
+
+[33mcommit deeb0e9c19caff544fc10c444e7129183130407f[m
+Merge: c3f97486 da8032fc
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 28 20:09:37 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing into main
+
+[33mcommit c3f97486a1769e406939479b121fbb1a41c186c8[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 28 20:09:23 2023 +0800
+
+    title script
+
+[33mcommit da8032fc678df73b12f601511d25a7432e614549[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Fri Apr 28 20:03:48 2023 +0800
+
+    add punching bag instruction
+
+[33mcommit b2e1a139b33136403ff5002b5817b3db12c42ba2[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon Apr 24 13:40:44 2023 +0800
+
+    title scene 360
+
+[33mcommit ad1536240540673efba28dd8ba55d16dd020aa58[m
+Merge: 07d09c7d 05fd5bb0
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon Apr 24 11:45:38 2023 +0800
+
+    Merge branch 'main' of https://gitlab.com/Virtual_Reality_2023/shadow-boxing into main
+
+[33mcommit 07d09c7d990ae6fd8597af45086e7062ae310657[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Mon Apr 24 11:45:06 2023 +0800
+
+    title scene to tutorial
+
+[33mcommit 05fd5bb08618c5f0273242229bce309a272c9afb[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Mon Apr 24 03:52:01 2023 +0800
+
+    set up direct interactor
+
+[33mcommit 7c8a2c5b06bb9b2c6656a373acb64fe07aad2c06[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun Apr 23 23:17:47 2023 +0800
+
+    add hit effect
+
+[33mcommit 8d33fb440e401b7c20a26dca31cc1e4776257f68[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun Apr 23 22:53:28 2023 +0800
+
+    add dodge scene
+
+[33mcommit 212bbbc5c8e3b8dcbb24b4b3bf38be13bb32c8cf[m
+Merge: 2d66553e 684c2e56
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun Apr 23 18:41:42 2023 +0800
+
+    add floating ball
+
+[33mcommit 2d66553e17498c43575ce44ab0e7a272462b6e73[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sun Apr 23 18:39:41 2023 +0800
+
+    add floating ball
+
+[33mcommit 684c2e567c24258edb105c55c32810b9d6751be7[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sun Apr 23 17:43:57 2023 +0800
+
+    add punch sound effect
+
+[33mcommit 185b07f27a326e3774e2d06645d0f6216f3fa684[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Sun Apr 23 16:23:36 2023 +0800
+
+    update title
+
+[33mcommit f2ae9ca3c75a9f5fd1e01e03f4ff0536f462f1d2[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sun Apr 23 15:33:57 2023 +0800
+
+    update assets
+
+[33mcommit 5fa10817360bc83689ec4be1a1adbc023025bb13[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sun Apr 23 15:23:48 2023 +0800
+
+    add punching bag and punching ball
+
+[33mcommit 4c01843776cf2e6f6a84920fb47fba0d52b0bc32[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sun Apr 23 15:22:33 2023 +0800
+
+    update assets
+
+[33mcommit 76a0bdf28ac2c7fb4c493e44a7b30f3dbe21c706[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sun Apr 23 15:19:55 2023 +0800
+
+    update assets
+
+[33mcommit 6c25a9e44b3eed242eb9d011b5a818f3b3fb9c6f[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Sun Apr 23 01:43:08 2023 +0800
+
+    delete gitlab-ci
+
+[33mcommit 89700358dc6dcbe4c6d5b1611044c6b68ccaa4a9[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Sat Apr 22 00:07:56 2023 +0800
+
+    title video(testing)
+
+[33mcommit 833230179cb2e93ed6ea2a0502cc9efc4166ca9c[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Thu Apr 20 01:01:41 2023 +0800
+
+    title animation
+
+[33mcommit 05014ede4342608651986d65172e602ad4f4f3d2[m
+Merge: d650a985 9e0a1821
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Wed Apr 19 09:01:53 2023 +0800
+
+    build titlescene
+
+[33mcommit d650a98543b12e0e1c272681a59fec8f3f7b21a5[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Wed Apr 19 08:46:49 2023 +0800
+
+    build titlescene
+
+[33mcommit 9e0a1821651fce5335cc447fa645caa826e2e90b[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Sat Apr 15 01:24:11 2023 +0800
+
+    add floating ball
+
+[33mcommit 91270cf358c10fc345d02f22fa44dd590c274efe[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Fri Apr 14 23:57:21 2023 +0800
+
+    little adjust
+
+[33mcommit 79141185799ba64acb39e40547d0013025fedc5d[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Fri Apr 14 23:36:56 2023 +0800
+
+    add VRtool
+
+[33mcommit 6c05946cc78cea43a263ce78147ace19e917f21b[m
+Author: Nerazim <craig19990517@gmail.com>
+Date:   Fri Apr 14 22:52:04 2023 +0800
+
+    add asset
+
+[33mcommit b928bd562b9b09821770b10f9adcf1d8e86128e9[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:28:36 2023 +0000
+
+    title.unity.meta
+
+[33mcommit 47ed4a3728ed62cd639364e96523cc8af73b9734[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:27:55 2023 +0000
+
+    white.mat.meta
+
+[33mcommit 8cb068ceff2ab0990cb696a3e21e79d2e7279514[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:27:36 2023 +0000
+
+    title-shadowboxing.fbx.meta
+
+[33mcommit 91cbb03151b3a3ce2601dbf45ff3e62ad48fb0ed[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:27:18 2023 +0000
+
+    title.obj.meta
+
+[33mcommit bcbbd9bab0e10f3bb17c716325ce815efdf6eb13[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:26:56 2023 +0000
+
+    title-shadowboxing.fbx
+
+[33mcommit 41769a4665c8f867e54e6b6269cc8818a1a7b464[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:25:46 2023 +0000
+
+    white.mat
+
+[33mcommit 8d8d7837a3e57de95e4b06d3996fa750f06abc17[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:25:15 2023 +0000
+
+    Metal.mat
+
+[33mcommit 8d7f7a8371e214781d1126cf2143788f063d934b[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:24:11 2023 +0000
+
+    dark.mat.meta
+
+[33mcommit 2c392a54b64e6fc59c2b0d65e5a852c849b999ed[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:23:51 2023 +0000
+
+    dark.mat.meta
+
+[33mcommit 8a81c52c036a39ff6f2b7300d4f437237e09dfd7[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:23:25 2023 +0000
+
+    shadowboxing vr title v1.fbx
+
+[33mcommit a147a1a8904f056e1f5fd5a70c956aaf4954c1a2[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:22:36 2023 +0000
+
+    Metal.mat.meta
+
+[33mcommit a735105f9a65bc0726c5253c54c775bad873a2fc[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:21:59 2023 +0000
+
+    shadowboxing vr title v1.fbx.meta
+
+[33mcommit 97e689f3120f74763d8a5f67e2957402e9358161[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:21:13 2023 +0000
+
+    title.obj
+
+[33mcommit cd502578963b4ce9d719f1e72abdabe0059b5b6f[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:20:35 2023 +0000
+
+    Add new directory
+
+[33mcommit ee2ed802150e76a42533779c1be63bd10245c768[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:20:10 2023 +0000
+
+    title elements
+
+[33mcommit 2a7584fe1d06d1349e0d9f89a9b778551d21d1f4[m
+Author: Wu tung yu <wty262690@gmail.com>
+Date:   Fri Apr 14 13:19:07 2023 +0000
+
+    title scene
+
+[33mcommit 118b565f52a0bb3d80ce31b891726defe9b49748[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Fri Apr 14 20:20:33 2023 +0800
+
+    Add CI Files
+
+[33mcommit 0c7b63919b261c918ae181b64660879efda113b7[m
+Author: melindakhosasih <melindakhosasih@gmail.com>
+Date:   Fri Apr 14 19:36:40 2023 +0800
+
+    Initial commit

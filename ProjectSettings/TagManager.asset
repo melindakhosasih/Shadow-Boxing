@@ -25,6 +25,12 @@ TagManager:
   - RightHook
   - RightJab
   - LeftJab
+  - GuardBlock
+  - system
+  - time_button
+  - hp_button
+  - start_button
+  - difficulity_button
   layers:
   - Default
   - TransparentFX
@@ -32,9 +38,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - playerGuardBody
+  - XRLeft
+  - XRRight
   - 
   - 
   - 
