@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4379402, g: 0.4858907, b: 0.566166, a: 1}
+  m_IndirectSpecularColor: {r: 0.17373022, g: 0.21720688, b: 0.29934022, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 129410901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.111, y: -0.852, z: 2.571147}
-  m_LocalScale: {x: 1, y: 1.3002, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 167209776}
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d883ad8b0d14e4f82340d500b06fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 729497708}
+  gameManager: {fileID: 0}
 --- !u!1 &161529469
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ Transform:
   m_GameObject: {fileID: 161529469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.111, y: -0.852, z: 2.3536468}
-  m_LocalScale: {x: 1, y: 1.3002, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 167209776}
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d883ad8b0d14e4f82340d500b06fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 729497708}
+  gameManager: {fileID: 0}
 --- !u!1 &167209775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053c7a5f706b9774bbf610165cb1f7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 729497708}
+  gameManager: {fileID: 0}
 --- !u!1 &367728915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053c7a5f706b9774bbf610165cb1f7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 729497708}
+  gameManager: {fileID: 0}
 --- !u!1 &1533224310
 GameObject:
   m_ObjectHideFlags: 0
@@ -20171,7 +20171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d883ad8b0d14e4f82340d500b06fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 729497708}
+  gameManager: {fileID: 0}
 --- !u!224 &7920521666034643728
 RectTransform:
   m_ObjectHideFlags: 0
