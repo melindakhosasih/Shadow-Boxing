@@ -47,12 +47,16 @@ public class Player : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (gameObject.tag == "LeftHand" && !gameManager.isPlayerLeftPunch()) {
             if(other.GetComponent<Collider>().tag == "Enemy") {
+                GameObject.FindWithTag("Enemy").GetComponent<Test2>().Play_Got_Punch_Ani();
+                GameObject.FindWithTag("system").GetComponent<shock>().leftHandShock();
                 // print("player hit enemy");
                 gameManager.setPlayerLeftPunch(true);
                 gameManager.updatePlayerScore(1);
             }
         } else if(gameObject.tag == "RightHand") {
             if(other.GetComponent<Collider>().tag == "Enemy" && !gameManager.isPlayerRightPunch()) {
+                GameObject.FindWithTag("Enemy").GetComponent<Test2>().Play_Got_Punch_Ani();
+                GameObject.FindWithTag("system").GetComponent<shock>().rightHandShock();
                 // print("player hit enemy");
                 gameManager.setPlayerRightPunch(true);
                 gameManager.updatePlayerScore(1);
