@@ -1,0 +1,102 @@
+{
+    "name": "controller",
+    "maps": [
+        {
+            "name": "lefthand",
+            "id": "80a59657-cb9a-4a29-9a97-93498b61cbbd",
+            "actions": [
+                {
+                    "name": "x",
+                    "type": "Button",
+                    "id": "4d57efbd-0e6d-4324-b887-874208f31a4c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "y",
+                    "type": "Button",
+                    "id": "833da15b-4425-4f9a-bc2e-e369fd06d94d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b4272bc0-24f6-4665-978e-d0018e82db59",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "x",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6076b8bd-e130-4b8b-aa21-7fe78b982c2d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "righthand",
+            "id": "34869413-4662-46c5-adeb-e599d6a485ad",
+            "actions": [
+                {
+                    "name": "a",
+                    "type": "Button",
+                    "id": "db8f97d5-94ab-47a8-a04d-3a0fe87146c4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "b",
+                    "type": "Button",
+                    "id": "f64b13e3-7df0-49f1-9887-7989b555b4e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dff22f7e-40c0-48b8-b9cf-25dccf67b180",
+                    "path": "<XRController>/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "a",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a578fcde-78f0-462e-94be-b097e1a4d83d",
+                    "path": "<XRController>/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "b",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
