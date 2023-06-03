@@ -11234,6 +11234,9 @@ MonoBehaviour:
   shatterTransform: {fileID: 0}
   firstPersonCamera: {fileID: 2060634147}
   overheadCamera: {fileID: 493514947}
+  effect: {fileID: 8300000, guid: cf2c1f92bd296534b8653799c3101113, type: 3}
+  audioSource: {fileID: 2060634148}
+  black2: {fileID: 229317204}
   nextScene: new_tutorial
 --- !u!65 &1101339834
 BoxCollider:
@@ -13784,6 +13787,9 @@ MonoBehaviour:
   shatterTransform: {fileID: 0}
   firstPersonCamera: {fileID: 0}
   overheadCamera: {fileID: 0}
+  effect: {fileID: 0}
+  audioSource: {fileID: 0}
+  black2: {fileID: 0}
   nextScene: Tutorial
 --- !u!65 &1305498081
 BoxCollider:
@@ -20938,7 +20944,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997465374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
