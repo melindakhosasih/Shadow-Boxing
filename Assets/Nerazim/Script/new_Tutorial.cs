@@ -55,8 +55,7 @@ public class new_Tutorial : MonoBehaviour
         if (step == 0)
         {
             if (sub_step == 0)
-            {
-                
+            { 
                 UI.gameObject.GetComponent<TextMeshPro>().text = "Welcome to Shadow Boxing! ";
                 UI2.gameObject.GetComponent<TextMeshPro>().text =  "       (press A....)";
             }
@@ -138,14 +137,18 @@ public class new_Tutorial : MonoBehaviour
                 step = step + 1;
             }
         }
-        else if (step == 4)
+        else if(step == 4)
+        {
+            step = step + 1;
+        }
+        else if (step == 5)
         {
             UI.gameObject.GetComponent<TextMeshPro>().text = "Complete!";
             UI2.gameObject.GetComponent<TextMeshPro>().text = "Congratulations!";
             prev_time = Time.time;
             step = step + 1;
         }
-        else if (step == 5)
+        else if (step == 6)
         {
             UI.gameObject.GetComponent<TextMeshPro>().text = "Complete!";
             UI2.gameObject.GetComponent<TextMeshPro>().text = "Congratulations!";
@@ -155,14 +158,14 @@ public class new_Tutorial : MonoBehaviour
                 step = step + 1;
             }
         }
-        else if (step == 6)
+        else if (step == 7)
         {
             UI.gameObject.GetComponent<TextMeshPro>().text = "After 3 seconds, it will jump to the main menu!";
             UI2.gameObject.GetComponent<TextMeshPro>().text = "";
             prev_time = Time.time;
             step = step + 1;
         }
-        else if (step == 7)
+        else if (step == 8)
         {
             time_ = 5-((int)(Time.time - prev_time));
             if (time_ == 0)
@@ -176,7 +179,7 @@ public class new_Tutorial : MonoBehaviour
                 step = step + 1;
             }
         }
-        else if(step == 8)
+        else if(step == 9)
         {
             SceneManager.LoadScene("main");
         }

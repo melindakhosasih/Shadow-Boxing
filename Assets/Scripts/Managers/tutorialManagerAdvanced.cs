@@ -5,9 +5,12 @@ using System;
 
 public class tutorialManagerAdvanced : MonoBehaviour
 {
+    private static tutorialManagerAdvanced instance;
+
     public List<GameObject> spheres;
     public bool triggered = false;
     public string mode = "All";
+    public bool isTutorial = true;
 
     private int move = 0;
     private List<List<int>> allMoveSelection;
@@ -47,6 +50,20 @@ public class tutorialManagerAdvanced : MonoBehaviour
         //Attack Only
         subList = new List<int> {0, 3, 4, 5, 6};
         allMoveSelection.Add(subList);
+    }
+
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.LogWarning("more than one tutorial manager detected");
+        }
+        instance = this;
+    }
+
+    public static tutorialManagerAdvanced GetInstance()
+    {
+        return instance;
     }
 
     void Update()
