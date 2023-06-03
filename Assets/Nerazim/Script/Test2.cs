@@ -79,10 +79,14 @@ public class Test2 : MonoBehaviour
 
     void playAnimation(string action)
     {
-        if (ani.isPlaying||move)
+        if (action != "got_punch")
         {
-            return;
+            if (ani.isPlaying||move)
+            {
+                return;
+            }
         }
+        
 
         ani.Play(action);
         if (((action == "Waiting")||(action == "Dodge"))||(action=="Guard"))
@@ -129,6 +133,12 @@ public class Test2 : MonoBehaviour
 
         return "Waiting";
     }
-    
+
+    public void Play_Got_Punch_Ani()
+    {
+       
+        playAnimation("got_punch");
+        canHit = false;
+    }
     
 }

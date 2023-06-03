@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Scene/popUpBall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Scene/popUpBall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_HP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_HP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_Startbuttom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_Startbuttom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_difficulity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_difficulity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_time.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_time.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new_Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new_Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/IK Jobs (Unity 2018.2.4f1).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/IK Jobs (Unity 2019.3).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/Oculus (Unity 2017.4.28f1, Oculus Integration v1.37).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/Playmaker (Unity 2017.4.28f1, PlayMaker 1.9.0).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/ReadyPlayerMe (Unity 2018.4.28f1, Oculus Integration).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/Steam VR (Unity 2017.4.28f1, SteamVR Plugin v2.6.1).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/UMA (Unity 2017.4.28f1, UMA 2.8.1).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/VRIK Animated Locomotion-XR Plugin (Unity2020.3.33f1).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/VRIK Movement Animset Pro.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/VRIK Photon Demo (Unity 2017.4.28f1, Oculus Integration, PUN 1.103).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/_Integration/VRIK Photon2 Demo (Unity 2017.4.28f1, Oculus or SteamVR Integration, PUN 2.20.2).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RootMotion/Import Assembly Definitions.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +123,7 @@
       <workItem from="1685176225163" duration="3948000" />
       <workItem from="1685380381310" duration="3117000" />
       <workItem from="1685383879261" duration="871000" />
+      <workItem from="1685709717520" duration="333000" />
     </task>
     <servers />
   </component>
