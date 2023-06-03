@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 25352636}
   - component: {fileID: 25352635}
   m_Layer: 0
-  m_Name: Boxing_Gloves_03_Left (1)
+  m_Name: Boxing_Gloves_03_Left
   m_TagString: LeftHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 751749212}
   - component: {fileID: 751749211}
   m_Layer: 0
-  m_Name: Boxing_Gloves_03_Right (1)
+  m_Name: Boxing_Gloves_03_Right
   m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146359
 Transform:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146363
 Transform:
   m_ObjectHideFlags: 0
@@ -838,7 +838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146365
 Transform:
   m_ObjectHideFlags: 0
@@ -901,7 +901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146369
 Transform:
   m_ObjectHideFlags: 0
@@ -1127,7 +1127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146383
 Transform:
   m_ObjectHideFlags: 0
@@ -3273,7 +3273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146699
 Transform:
   m_ObjectHideFlags: 0
@@ -3367,7 +3367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146705
 Transform:
   m_ObjectHideFlags: 0
@@ -3588,7 +3588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146719
 Transform:
   m_ObjectHideFlags: 0
@@ -3652,7 +3652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146723
 Transform:
   m_ObjectHideFlags: 0
@@ -3684,7 +3684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146725
 Transform:
   m_ObjectHideFlags: 0
@@ -4649,7 +4649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4734242041098637249}
   m_LocalRotation: {x: -0.00000030554762, y: 0.090723015, z: -0.000000026172659, w: 0.9958762}
-  m_LocalPosition: {x: -0.19709714, y: 0.000000014880397, z: -0.000000008546294}
+  m_LocalPosition: {x: -0.48, y: 0, z: 0.025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4941,14 +4941,14 @@ MonoBehaviour:
     rightUpperArm: {fileID: 4734242041098146775}
     rightForearm: {fileID: 4734242041098146743}
     rightHand: {fileID: 4734242041098146733}
-    leftThigh: {fileID: 4734242041098146309}
-    leftCalf: {fileID: 4734242041098146351}
-    leftFoot: {fileID: 4734242041098146397}
-    leftToes: {fileID: 4734242041098146305}
-    rightThigh: {fileID: 4734242041098146649}
-    rightCalf: {fileID: 4734242041098146691}
-    rightFoot: {fileID: 4734242041098146737}
-    rightToes: {fileID: 4734242041098146661}
+    leftThigh: {fileID: 0}
+    leftCalf: {fileID: 0}
+    leftFoot: {fileID: 0}
+    leftToes: {fileID: 0}
+    rightThigh: {fileID: 0}
+    rightCalf: {fileID: 0}
+    rightFoot: {fileID: 0}
+    rightToes: {fileID: 0}
   solver:
     executedInEditor: 0
     IKPosition: {x: 0, y: 0, z: 0}
@@ -4993,7 +4993,7 @@ MonoBehaviour:
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
-      swivelOffset: 20
+      swivelOffset: -9
       wristToPalmAxis: {x: -1, y: -0, z: -0}
       palmToThumbAxis: {x: -0, y: -1, z: -0}
       armLengthMlp: 1
@@ -5042,7 +5042,7 @@ MonoBehaviour:
       shoulderPitchOffset: -30
       bendGoal: {fileID: 0}
       bendGoalWeight: 0
-      swivelOffset: -20
+      swivelOffset: 28
       wristToPalmAxis: {x: -1, y: -0, z: -0}
       palmToThumbAxis: {x: 0, y: 1, z: 0}
       armLengthMlp: 1
@@ -5412,7 +5412,7 @@ MonoBehaviour:
   fixTransforms: 1
   solver:
     executedInEditor: 0
-    IKPosition: {x: -0.6206202, y: 1.2348306, z: -0.09882724}
+    IKPosition: {x: -0.6206202, y: 0.9558306, z: -0.09882724}
     IKPositionWeight: 1
     root: {fileID: 4734242041098146799}
     IKRotationWeight: 1
@@ -5455,30 +5455,30 @@ MonoBehaviour:
     isLeft: 1
     arm:
       bones:
-      - readPosition: {x: -0.053100936, y: 1.650296, z: -0.059498787}
+      - readPosition: {x: -0.053100936, y: 1.3712959, z: -0.059498787}
         readRotation: {x: 0.005115241, y: -0.050398424, z: 0.14895335, w: 0.98754597}
-        solverPosition: {x: -0.053100936, y: 1.650296, z: -0.059498787}
+        solverPosition: {x: -0.053100936, y: 1.3712959, z: -0.059498787}
         solverRotation: {x: 0.005115241, y: -0.050398424, z: 0.14895335, w: 0.98754597}
         length: 0.16176566
         sqrMag: 0.02616813
         axis: {x: -0.16176565, y: 0.000066060136, z: 0.000022922768}
-      - readPosition: {x: -0.2068883, y: 1.602851, z: -0.075825214}
+      - readPosition: {x: -0.2068883, y: 1.323851, z: -0.075825214}
         readRotation: {x: -0.017606616, y: -0.08923442, z: 0.37789208, w: 0.9213712}
-        solverPosition: {x: -0.2068883, y: 1.602851, z: -0.075825214}
+        solverPosition: {x: -0.2068883, y: 1.323851, z: -0.075825214}
         solverRotation: {x: -0.017606616, y: -0.08923442, z: 0.37789208, w: 0.9213712}
         length: 0.2779639
         sqrMag: 0.07726393
         axis: {x: -0.2779639, y: 0.000000045868482, z: 0.00000020163544}
-      - readPosition: {x: -0.4010377, y: 1.4084153, z: -0.117833495}
+      - readPosition: {x: -0.4010377, y: 1.1294153, z: -0.117833495}
         readRotation: {x: -0.013367176, y: 0.031235298, z: 0.32815254, w: 0.9440136}
-        solverPosition: {x: -0.4010377, y: 1.4084153, z: -0.117833495}
+        solverPosition: {x: -0.4010377, y: 1.1294153, z: -0.117833495}
         solverRotation: {x: -0.013367176, y: 0.031235298, z: 0.32815254, w: 0.9440136}
         length: 0.28055188
         sqrMag: 0.07870936
         axis: {x: -0.28055188, y: 0.0000000012386091, z: -0.00000002651941}
-      - readPosition: {x: -0.6206202, y: 1.2348306, z: -0.09882724}
+      - readPosition: {x: -0.6206202, y: 0.9558306, z: -0.09882724}
         readRotation: {x: -0.6903032, y: -0.21021828, z: 0.26552746, w: 0.63936305}
-        solverPosition: {x: -0.6206202, y: 1.2348306, z: -0.09882724}
+        solverPosition: {x: -0.6206202, y: 0.9558306, z: -0.09882724}
         solverRotation: {x: -0.6903032, y: -0.21021828, z: 0.26552746, w: 0.63936305}
         length: 0
         sqrMag: 0
@@ -5833,7 +5833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4734242041098146309
 Transform:
   m_ObjectHideFlags: 0
