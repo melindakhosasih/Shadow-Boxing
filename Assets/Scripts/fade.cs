@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class fade : MonoBehaviour
 {
@@ -13,25 +14,30 @@ public class fade : MonoBehaviour
     }
 
     // Update is called once per frame
+    public void imagefadein(Image i, float speed,float wait){
+        image = i;
+        StartCoroutine(fadeinanimation(image,speed,wait));
+    }
+    
     public void scenefadein(float speed,float wait){
         image = GameObject.Find("black").GetComponent<Image>();
-        StartCoroutine(fadeoutanimation(speed,wait));
+        StartCoroutine(fadeoutanimation(image,speed,wait));
     }
     public void scenefadeout(float speed,float wait){
         image = GameObject.Find("black").GetComponent<Image>();
-        StartCoroutine(fadeinanimation(speed,wait));
+        StartCoroutine(fadeinanimation(image,speed,wait));
     }
 
-    IEnumerator fadeinanimation(float speed,float wait){
-        while(image.color.a<1f){
-            image.color = colorfadein(speed, image.color);
+    IEnumerator fadeinanimation(Image i, float speed,float wait){
+        while(i.color.a<1f){
+            i.color = colorfadein(speed, i.color);
             yield return new WaitForSeconds(wait);
         }
     }
 
-    IEnumerator fadeoutanimation(float speed,float wait){
-        while(image.color.a>0f){
-            image.color = colorfadeout(speed, image.color);
+    IEnumerator fadeoutanimation(Image i, float speed,float wait){
+        while(i.color.a>0f){
+            i.color = colorfadeout(speed, i.color);
             yield return new WaitForSeconds(wait);
         }
     }

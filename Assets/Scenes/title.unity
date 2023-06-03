@@ -11234,7 +11234,7 @@ MonoBehaviour:
   shatterTransform: {fileID: 0}
   firstPersonCamera: {fileID: 2060634147}
   overheadCamera: {fileID: 493514947}
-  nextScene: TempTutorial
+  nextScene: new_tutorial
 --- !u!65 &1101339834
 BoxCollider:
   m_ObjectHideFlags: 0
