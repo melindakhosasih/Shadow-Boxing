@@ -6,6 +6,8 @@ public class triggerScript : MonoBehaviour
 {
     public string triggerName;
     public bool isLeft;
+    public bool isFirst;
+    public bool isMain;
 
     private MeshRenderer Renderer;
     private bool Active;
@@ -14,6 +16,8 @@ public class triggerScript : MonoBehaviour
     void Start()
     {
         Renderer = GetComponent<MeshRenderer>();
+        if(tutorialManagerAdvanced.GetInstance().isTutorial) Renderer.enabled = true;
+        else Renderer.enabled = false;
         Active = true;
 
         if(isLeft) targetGloveTag = "LeftHand";
@@ -22,13 +26,18 @@ public class triggerScript : MonoBehaviour
 
     public void Hide()
     {
-        Renderer.enabled = false;
+        if(tutorialManagerAdvanced.GetInstance().isTutorial) Renderer.enabled = false;
         Active = false;
+    }
+
+    public void Hide_Active()
+    {
+        if(tutorialManagerAdvanced.GetInstance().isTutorial) Renderer.enabled = false;
     }
 
     public void Show()
     {
-        Renderer.enabled = true;
+        if(tutorialManagerAdvanced.GetInstance().isTutorial) Renderer.enabled = true;
         Active = true;
     }
 
@@ -39,10 +48,12 @@ public class triggerScript : MonoBehaviour
             if(obj.gameObject.tag == targetGloveTag && isLeft)
             {
                 LeftGloveInstance.GetInstance().changeState(triggerName);
+                if(new_Tutorial.GetInstance().allowIncrement && isMain) new_Tutorial.GetInstance().incrementCounter();
             }
             else if(obj.gameObject.tag == targetGloveTag && !isLeft)
             {
                 RightGloveInstance.GetInstance().changeState(triggerName);
+                if(new_Tutorial.GetInstance().allowIncrement && isMain) new_Tutorial.GetInstance().incrementCounter();
             }
         }
     }
@@ -53,14 +64,15 @@ public class triggerScript : MonoBehaviour
         {
             if(obj.gameObject.tag == targetGloveTag && isLeft)
             {
-                LeftGloveInstance.GetInstance().changeState("Neutral");
+                LeftGloveInstance.GetInstance().resetState();
+                // Show();
             }
             else if(obj.gameObject.tag == targetGloveTag && !isLeft)
             {
-                RightGloveInstance.GetInstance().changeState("Neutral");
+                RightGloveInstance.GetInstance().resetState();
+                // Show();
             } 
         }
-        
     }
 
 }

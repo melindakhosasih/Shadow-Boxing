@@ -2,55 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class tutorialManagerAdvanced : MonoBehaviour
 {
     private static tutorialManagerAdvanced instance;
 
-    public List<GameObject> spheres;
-    public bool triggered = false;
-    public string mode = "All";
-    public bool isTutorial = true;
+    public triggerScript[] leftTriggers;
+    public triggerScript[] rightTriggers;
+    public bool isTutorial = false;
 
-    private int move = 0;
-    private List<List<int>> allMoveSelection;
-    private List<int> moveSelection;
-    
-    public enum modes
+    private triggerScript[] selectedLeftTriggers;
+    private triggerScript[] selectedRightTriggers;
+
+    public enum ModeSelection
     {
-        All = 0,
-        BlockOnly = 1,
-        JabOnly = 2,
-        HookOnly = 3,
-        AttackOnly = 4
+        All,
+        Block,
+        HookBlock,
+        Jab,
+        Hook,
+        Attack,
+        None
     }
 
-    void Start()
-    {
-        allMoveSelection = new List<List<int>>();
-        
-        List<int> subList;
-
-        //All
-        subList = new List<int> {0, 1, 2, 3, 4, 5, 6};
-        allMoveSelection.Add(subList);
-
-        //Block Only
-        subList = new List<int> {0, 1, 2};
-        allMoveSelection.Add(subList);
-
-        //Jab Only
-        subList = new List<int> {0, 3, 4};
-        allMoveSelection.Add(subList);
-
-        //Hook Only
-        subList = new List<int> {0, 5, 6};
-        allMoveSelection.Add(subList);
-
-        //Attack Only
-        subList = new List<int> {0, 3, 4, 5, 6};
-        allMoveSelection.Add(subList);
-    }
+    public ModeSelection selectedMode;
 
     private void Awake()
     {
@@ -66,51 +42,120 @@ public class tutorialManagerAdvanced : MonoBehaviour
         return instance;
     }
 
+    void Start()
+    {
+        StartTutorial(selectedMode);
+    }
+
     void Update()
     {
-        modes modeEnum;
 
-        if (Enum.TryParse(mode, out modeEnum))
-        {
-            int modeValue = (int)modeEnum;
-            moveSelection = allMoveSelection[modeValue];
-        }
-
-        // print(move);
-        if (triggered)
-        {
-            if(move == 0)
-            {
-                spheres[0].SetActive(false);
-                spheres[1].SetActive(false);
-            }
-            next(move);
-            move = chooseNextMove();
-            triggered = false;
-        }
     }
 
-    int chooseNextMove()
+    private triggerScript[] Movements(triggerScript[] triggers)
     {
-        return UnityEngine.Random.Range(0, moveSelection.Count);
-    }
+        triggerScript[] selectedTriggers = new triggerScript[0];
+        List<triggerScript> selectedTriggersList = new List<triggerScript>();
 
-    public void trigger()
-    {
-        triggered = true;
-    }
-
-    void next(int move)
-    {
-        switch (move)
+        switch (selectedMode)
         {
-            case 0:
-                spheres[0].SetActive(true);
-                spheres[1].SetActive(true);
+            case ModeSelection.All:
+                selectedTriggersList = new List<triggerScript>(triggers);
+                break;
+            case ModeSelection.Block:
+                foreach (triggerScript trigger in triggers)
+                {
+                    if (trigger.triggerName == "Jab Block")
+                    {
+                        selectedTriggersList.Add(trigger);
+                    }
+                }
+                break;
+            case ModeSelection.HookBlock:
+                foreach (triggerScript trigger in triggers)
+                {
+                    if (trigger.triggerName == "Hook Block")
+                    {
+                        selectedTriggersList.Add(trigger);
+                    }
+                }
+                break;
+            case ModeSelection.Jab:
+                foreach (triggerScript trigger in triggers)
+                {
+                    if (trigger.triggerName == "Jab 1" || trigger.triggerName == "Jab 2")
+                    {
+                        selectedTriggersList.Add(trigger);
+                    }
+                }
+                break;
+            case ModeSelection.Hook:
+                foreach (triggerScript trigger in triggers)
+                {
+                    if (trigger.triggerName == "Hook 1" || trigger.triggerName == "Hook 2")
+                    {
+                        selectedTriggersList.Add(trigger);
+                    }
+                }
+                break;
+            case ModeSelection.Attack:
+                foreach (triggerScript trigger in triggers)
+                {
+                    if (trigger.triggerName == "Jab 1" || trigger.triggerName == "Jab 2" ||
+                        trigger.triggerName == "Hook 1" || trigger.triggerName == "Hook 2")
+                    {
+                        selectedTriggersList.Add(trigger);
+                    }
+                }
+                break;
+            case ModeSelection.None:
                 break;
             default:
-                spheres[move + 1].SetActive(true);
+                selectedTriggersList = new List<triggerScript>(triggers);
                 break;
         }
+        selectedTriggers = selectedTriggersList.ToArray();
+
+        return selectedTriggers;
+    } 
+
+    private void disableTriggers(triggerScript[] triggers)
+    {
+        foreach (triggerScript trigger in triggers)
+        {
+            trigger.Hide();
+        }
+    }
+
+    private IEnumerator StartTutorialCoroutine(ModeSelection selected)
+    {
+        selectedMode = selected;
+        yield return null;
+
+        if(tutorialManagerAdvanced.GetInstance().isTutorial) disableTriggers(leftTriggers);
+        if(tutorialManagerAdvanced.GetInstance().isTutorial) disableTriggers(rightTriggers);
+        
+        selectedLeftTriggers = Movements(leftTriggers);
+        selectedRightTriggers = Movements(rightTriggers);
+        
+        moveManager.GetInstance().updateTriggers(selectedLeftTriggers, selectedRightTriggers);
+    }
+
+    public void StartTutorial(ModeSelection selected)
+    {
+        if(selected == ModeSelection.All)
+        {
+            isTutorial = false;
+        }
+        else
+        {
+            isTutorial = true;
+        }
+        StartCoroutine(StartTutorialCoroutine(selected));
+    }
+
+    public bool getIsTutorial()
+    {
+        return isTutorial;
     }
 }

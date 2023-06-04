@@ -31,6 +31,11 @@ public class LeftGloveInstance : MonoBehaviour
         state = newState;
     }
 
+    public void resetState()
+    {
+        state = "Neutral";
+    }
+
     public string getState()
     {
         return state;

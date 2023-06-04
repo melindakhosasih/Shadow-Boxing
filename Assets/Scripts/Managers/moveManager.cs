@@ -13,9 +13,13 @@ public class moveManager : MonoBehaviour
     public triggerScript[] leftTriggers;
     public triggerScript[] rightTriggers;
 
+    private bool leftDisabled;
+    private bool rightDisabled;
+
     void Start()
     {
-
+        leftDisabled = false;
+        rightDisabled = false;
     }
 
     void Update()
@@ -31,7 +35,6 @@ public class moveManager : MonoBehaviour
         {
             jabBlockState = false;
         }
-
         Focus();
     }
 
@@ -49,74 +52,250 @@ public class moveManager : MonoBehaviour
         return instance;
     }
 
-    private void Focus()
+    private void disableLeft()
+    {
+        leftDisabled = true;
+    }
+
+    private void enableLeft()
+    {
+        leftDisabled = false;
+    }
+
+    private void disableRight()
+    {
+        rightDisabled = true;
+    }
+
+    private void enableRight()
+    {
+        rightDisabled = false;
+    }
+
+    public void Focus()
     {  
-        if(jabBlockState)
-        {
-            foreach (triggerScript trigger in leftTriggers)
+        foreach (triggerScript trigger in leftTriggers)
+        {   
+            if(tutorialManagerAdvanced.GetInstance().isTutorial)
             {
-                if(trigger.triggerName != leftGloveState)
+                if(new_Tutorial.GetInstance().getSide() != 1 && trigger.isFirst) trigger.Show();
+                else if(leftGloveState == "Jab 1")
                 {
-                    trigger.Hide();
+                    if(leftGloveState == trigger.triggerName)
+                    {
+                        trigger.Hide_Active();
+                    }
+                    else if(trigger.triggerName == "Jab 2")
+                    {
+                        trigger.Show();
+                    }
+                    else
+                    {
+                        trigger.Hide();
+                    }
+                    
                 }
-                else{
-                    trigger.Show();
+                else if(leftGloveState == "Hook 1")
+                {
+                    if(leftGloveState == trigger.triggerName)
+                    {
+                        trigger.Hide_Active();
+                    }
+                    else if(trigger.triggerName == "Hook 2")
+                    {
+                        trigger.Show();
+                    }
+                    else
+                    {
+                        trigger.Hide();
+                    }
+                    
                 }
+                else trigger.Hide();
+                continue;
             }
-            foreach (triggerScript trigger in rightTriggers)
+
+            if(trigger.triggerName == "Jab Block" && rightGloveState != "Neutral" && rightGloveState != "Jab Block")
             {
-                if(trigger.triggerName != rightGloveState)
+                trigger.Hide();
+            }
+            else if(leftGloveState == "Neutral" && trigger.isFirst)
+            {  
+                trigger.Show();
+            }
+            else if(leftGloveState == "Jab Block")
+            {
+                if(!jabBlockState && trigger.isFirst)
+                {
+                    trigger.Show();
+                }
+                else if(jabBlockState && leftGloveState == trigger.triggerName)
+                {
+                    trigger.Show();
+                }
+                else
                 {
                     trigger.Hide();
                 }
-                else{
+                
+            }
+            else if(leftGloveState == "Jab 1")
+            {
+                if(leftGloveState == trigger.triggerName)
+                {
+                    trigger.Hide_Active();
+                }
+                else if(trigger.triggerName == "Jab 2")
+                {
                     trigger.Show();
                 }
+                else
+                {
+                    trigger.Hide();
+                }
+                
+            }
+            else if(leftGloveState == "Hook 1")
+            {
+                if(leftGloveState == trigger.triggerName)
+                {
+                    trigger.Hide_Active();
+                }
+                else if(trigger.triggerName == "Hook 2")
+                {
+                    trigger.Show();
+                }
+                else
+                {
+                    trigger.Hide();
+                }
+                
+            }
+            else if(leftGloveState == trigger.triggerName)
+            {
+                trigger.Show();
+            }
+            else
+            {
+                trigger.Hide();
             }
         }
-        else
+        foreach (triggerScript trigger in rightTriggers)
         {
-            if(leftGloveState == "Jab Block" || leftGloveState == "Neutral")
+            if(tutorialManagerAdvanced.GetInstance().isTutorial)
             {
-                foreach (triggerScript trigger in leftTriggers)
+                if(new_Tutorial.GetInstance().getSide() != 2  && trigger.isFirst) trigger.Show();
+                else if(rightGloveState == "Jab 1")
                 {
-                    trigger.Show();
-                }
-            }
-            else
-            {
-                foreach (triggerScript trigger in leftTriggers)
-                {
-                    if(trigger.triggerName != leftGloveState)
+                    if(rightGloveState == trigger.triggerName)
+                    {
+                        trigger.Hide_Active();
+                    }
+                    else if(trigger.triggerName == "Jab 2")
+                    {
+                        trigger.Show();
+                    }
+                    else
                     {
                         trigger.Hide();
                     }
-                    else{
+                    
+                }
+                else if(rightGloveState == "Hook 1")
+                {
+                    if(rightGloveState == trigger.triggerName)
+                    {
+                        trigger.Hide_Active();
+                    }
+                    else if(trigger.triggerName == "Hook 2")
+                    {
                         trigger.Show();
                     }
-                }
-            }
-            if(rightGloveState == "Jab Block" || rightGloveState == "Neutral")
-            {
-                foreach (triggerScript trigger in rightTriggers)
-                {
-                    trigger.Show();
-                }
-            }
-            else
-            {
-                foreach (triggerScript trigger in rightTriggers)
-                {
-                    if(trigger.triggerName != rightGloveState)
+                    else
                     {
                         trigger.Hide();
                     }
-                    else{
-                        trigger.Show();
-                    }
+                    
                 }
+                else trigger.Hide();
+                continue;
+            }
+
+            if(trigger.triggerName == "Jab Block" && leftGloveState != "Neutral" && leftGloveState != "Jab Block")
+            {
+                trigger.Hide();
+            }
+            else if(rightGloveState == "Neutral" && trigger.isFirst)
+            {   
+                trigger.Show();
+            }
+            else if(rightGloveState == "Jab Block")
+            {
+                if(!jabBlockState && trigger.isFirst)
+                {
+                    trigger.Show();
+                }
+                else if(jabBlockState && rightGloveState == trigger.triggerName)
+                {
+                    trigger.Show();
+                }
+                else
+                {
+                    trigger.Hide();
+                }
+                
+            }
+            else if(rightGloveState == "Jab 1")
+            {
+                if(rightGloveState == trigger.triggerName)
+                {
+                    trigger.Hide_Active();
+                }
+                else if(trigger.triggerName == "Jab 2")
+                {
+                    trigger.Show();
+                }
+                else
+                {
+                    trigger.Hide();
+                }
+                
+            }
+            else if(rightGloveState == "Hook 1")
+            {
+                if(rightGloveState == trigger.triggerName)
+                {
+                    trigger.Hide_Active();
+                }
+                else if(trigger.triggerName == "Hook 2")
+                {
+                    trigger.Show();
+                }
+                else
+                {
+                    trigger.Hide();
+                }
+                
+            }
+            else if(rightGloveState == trigger.triggerName)
+            {
+                trigger.Show();
+            }
+            else
+            {
+                trigger.Hide();
             }
         }
     }
-    
+
+    public void updateTriggers(triggerScript[] selectedLeftTriggers, triggerScript[] selectedRightTriggers)
+    {
+        leftTriggers = selectedLeftTriggers;
+        rightTriggers = selectedRightTriggers;
+    }
+
+    public bool getJabBlockState()
+    {
+        return jabBlockState;
+    }
 }
