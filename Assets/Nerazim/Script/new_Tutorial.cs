@@ -115,6 +115,7 @@ public class new_Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (step == 0)
         {
             if (sub_step == 0)
@@ -133,6 +134,11 @@ public class new_Tutorial : MonoBehaviour
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
             }
             else if (sub_step == 3)
+            {
+                UI.gameObject.GetComponent<TextMeshPro>().text = "If the glove falls on the ground use the button behind the controller to pick it up ";
+                UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
+            }
+            else if (sub_step == 4)
             {
                 videoBox_glove.SetActive(true);
                 UI.gameObject.GetComponent<TextMeshPro>().text = "";
