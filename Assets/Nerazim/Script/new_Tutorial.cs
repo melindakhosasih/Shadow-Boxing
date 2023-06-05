@@ -144,23 +144,23 @@ public class new_Tutorial : MonoBehaviour
                 UI.gameObject.GetComponent<TextMeshPro>().text = "";
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
             }
-            else if (sub_step == 4)
+            else if (sub_step == 5)
             {
                 videoBox_glove.SetActive(false);
                 UI.gameObject.GetComponent<TextMeshPro>().text = "We will now begin the basic tutorial";
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
+                step += 4;
             }
-            else if (sub_step == 5)
+            else if (sub_step == 6)
             {
                 UI.gameObject.GetComponent<TextMeshPro>().text = "";
                 videoBox.SetActive(true);
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
             }
-            if (sub_step == 6)
+            if (sub_step == 7)
             {
                 videoBox.SetActive(false);
                 whiteCircle.SetActive(true);
-                step = step + 4;
             }
         }
         else if (step == 1)
