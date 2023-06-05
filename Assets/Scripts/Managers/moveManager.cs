@@ -76,46 +76,11 @@ public class moveManager : MonoBehaviour
     {  
         foreach (triggerScript trigger in leftTriggers)
         {   
-            if(tutorialManagerAdvanced.GetInstance().isTutorial)
+            if(new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 1)
             {
-                if(new_Tutorial.GetInstance().getSide() != 1 && trigger.isFirst) trigger.Show();
-                else if(leftGloveState == "Jab 1")
-                {
-                    if(leftGloveState == trigger.triggerName)
-                    {
-                        trigger.Hide_Active();
-                    }
-                    else if(trigger.triggerName == "Jab 2")
-                    {
-                        trigger.Show();
-                    }
-                    else
-                    {
-                        trigger.Hide();
-                    }
-                    
-                }
-                else if(leftGloveState == "Hook 1")
-                {
-                    if(leftGloveState == trigger.triggerName)
-                    {
-                        trigger.Hide_Active();
-                    }
-                    else if(trigger.triggerName == "Hook 2")
-                    {
-                        trigger.Show();
-                    }
-                    else
-                    {
-                        trigger.Hide();
-                    }
-                    
-                }
-                else trigger.Hide();
-                continue;
+                trigger.Hide();
             }
-
-            if(trigger.triggerName == "Jab Block" && rightGloveState != "Neutral" && rightGloveState != "Jab Block")
+            else if(trigger.triggerName == "Jab Block" && rightGloveState != "Neutral" && rightGloveState != "Jab Block")
             {
                 trigger.Hide();
             }
@@ -182,46 +147,11 @@ public class moveManager : MonoBehaviour
         }
         foreach (triggerScript trigger in rightTriggers)
         {
-            if(tutorialManagerAdvanced.GetInstance().isTutorial)
+            if(new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 2)
             {
-                if(new_Tutorial.GetInstance().getSide() != 2  && trigger.isFirst) trigger.Show();
-                else if(rightGloveState == "Jab 1")
-                {
-                    if(rightGloveState == trigger.triggerName)
-                    {
-                        trigger.Hide_Active();
-                    }
-                    else if(trigger.triggerName == "Jab 2")
-                    {
-                        trigger.Show();
-                    }
-                    else
-                    {
-                        trigger.Hide();
-                    }
-                    
-                }
-                else if(rightGloveState == "Hook 1")
-                {
-                    if(rightGloveState == trigger.triggerName)
-                    {
-                        trigger.Hide_Active();
-                    }
-                    else if(trigger.triggerName == "Hook 2")
-                    {
-                        trigger.Show();
-                    }
-                    else
-                    {
-                        trigger.Hide();
-                    }
-                    
-                }
-                else trigger.Hide();
-                continue;
+                trigger.Hide();
             }
-
-            if(trigger.triggerName == "Jab Block" && leftGloveState != "Neutral" && leftGloveState != "Jab Block")
+            else if(trigger.triggerName == "Jab Block" && leftGloveState != "Neutral" && leftGloveState != "Jab Block")
             {
                 trigger.Hide();
             }

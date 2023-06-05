@@ -44,7 +44,7 @@ public class tutorialManagerAdvanced : MonoBehaviour
 
     void Start()
     {
-        StartTutorial(selectedMode);
+        
     }
 
     void Update()
@@ -139,23 +139,14 @@ public class tutorialManagerAdvanced : MonoBehaviour
         selectedRightTriggers = Movements(rightTriggers);
         
         moveManager.GetInstance().updateTriggers(selectedLeftTriggers, selectedRightTriggers);
+
+        LeftGloveInstance.GetInstance().resetState();
+        RightGloveInstance.GetInstance().resetState();
     }
 
-    public void StartTutorial(ModeSelection selected)
+    public void StartTutorial(ModeSelection selected, bool tutorial)
     {
-        if(selected == ModeSelection.All)
-        {
-            isTutorial = false;
-        }
-        else
-        {
-            isTutorial = true;
-        }
+        isTutorial = tutorial;
         StartCoroutine(StartTutorialCoroutine(selected));
-    }
-
-    public bool getIsTutorial()
-    {
-        return isTutorial;
     }
 }

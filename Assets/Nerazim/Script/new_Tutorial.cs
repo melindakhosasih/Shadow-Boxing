@@ -34,11 +34,10 @@ public class new_Tutorial : MonoBehaviour
     string mission2 = "punch tutorial : hit the fixed ball";
     string mission3 = "punch tutorial : hit the floating ball";
 
-    public bool allowIncrement = false;
+    public int sideMode = 0;
     private int counter;
-    private int sideMode = 0;
-    private bool blockNow = false;
-    private bool tutorialInProgress;
+    private float elapsedTime;
+    public bool tutorialInProgress;
     
 
     private void Awake()
@@ -69,20 +68,48 @@ public class new_Tutorial : MonoBehaviour
         videoBox.SetActive(false);
         videoBox_glove.SetActive(false);
 
-        tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None);
+        tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None, true);
         tutorialInProgress = false;
     }
 
-    public void incrementCounter()
+    public bool CheckString(string value, string targetValue)
     {
-        counter += 1;
-        if(sideMode == 1) sideMode = 2;
-        else if(sideMode == 2) sideMode = 1;
+        if (targetValue != value)
+        {
+            targetValue = value;
+            elapsedTime = 0f;
+        }
+        else
+        {
+            elapsedTime += Time.deltaTime;
+        }
+
+        if (elapsedTime >= 3f)
+        {
+            return true;
+        }
+
+        return false;
     }
 
-    public int getSide()
+    public bool CheckBool(bool value, bool targetValue)
     {
-        return sideMode;
+        if (targetValue != value)
+        {
+            targetValue = value;
+            elapsedTime = 0f;
+        }
+        else
+        {
+            elapsedTime += Time.deltaTime;
+        }
+
+        if (elapsedTime >= 3f)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     // Update is called once per frame
@@ -107,32 +134,27 @@ public class new_Tutorial : MonoBehaviour
             }
             else if (sub_step == 3)
             {
-                UI.gameObject.GetComponent<TextMeshPro>().text = "If the glove falls on the ground use the button behind the controller to pick it up ";
-                UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
-            }
-            else if (sub_step == 4)
-            {
                 videoBox_glove.SetActive(true);
                 UI.gameObject.GetComponent<TextMeshPro>().text = "";
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
             }
-            else if (sub_step == 5)
+            else if (sub_step == 4)
             {
                 videoBox_glove.SetActive(false);
                 UI.gameObject.GetComponent<TextMeshPro>().text = "We will now begin the basic tutorial";
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
             }
-            else if (sub_step == 6)
+            else if (sub_step == 5)
             {
                 UI.gameObject.GetComponent<TextMeshPro>().text = "";
                 videoBox.SetActive(true);
                 UI2.gameObject.GetComponent<TextMeshPro>().text = "        (press A....)";
             }
-            if (sub_step == 7)
+            if (sub_step == 6)
             {
                 videoBox.SetActive(false);
                 whiteCircle.SetActive(true);
-                step = step + 1;
+                step = step + 4;
             }
         }
         else if (step == 1)
@@ -172,54 +194,69 @@ public class new_Tutorial : MonoBehaviour
                 mission_complete_number = mission_complete_number + 1;
                 step = step + 1;
             }
+
+            tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.All, false);
         }
         else if(step == 4) //Jab Block
         {
             UI.gameObject.GetComponent<TextMeshPro>().text = "Blocking Jabs";
-            UI2.gameObject.GetComponent<TextMeshPro>().text = "Please raise your hand to the spheres";
+            UI2.gameObject.GetComponent<TextMeshPro>().text = "Please raise your hand to the spheres for " + (4 - Mathf.Ceil(elapsedTime))+ " seconds";
 
             if(!tutorialInProgress)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.Block);
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.Block, true);
                 tutorialInProgress = true;
-                blockNow = true;
                 counter = 0;
                 sideMode = 0;
             }
+
+            if(counter == 0)
+            {
+                if(CheckBool(moveManager.GetInstance().getJabBlockState(), true))
+                {
+                    counter += 1;
+                }
+            }
             if(counter == 1)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None);
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None, true);
                 tutorialInProgress = false;
                 step += 1; 
-            }
-
-            if(blockNow && moveManager.GetInstance().getJabBlockState())
-            {
-                counter += 1;
-                blockNow = false;
-            }
-            else if(!blockNow && !moveManager.GetInstance().getJabBlockState())
-            {
-                blockNow = true;
             }
         }
         else if(step == 5) //Hook Block
         {
             if(sideMode == 1) UI.gameObject.GetComponent<TextMeshPro>().text = "Blocking Right Hook";
             else if (sideMode == 2) UI.gameObject.GetComponent<TextMeshPro>().text = "Blocking Left Hooks";
-            UI2.gameObject.GetComponent<TextMeshPro>().text = "Please raise your hand to the spheres";
+            UI2.gameObject.GetComponent<TextMeshPro>().text = "Please raise your hand to the spheres for " + (4 - Mathf.Ceil(elapsedTime))+ " seconds";
 
             if(!tutorialInProgress)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.HookBlock);
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.HookBlock, true);
                 tutorialInProgress = true;
                 counter = 0;
                 sideMode = 1;
-                allowIncrement = true;
+                elapsedTime = 0;
             }
-            if(counter == 2)
+            if(counter == 0)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None);
+                if(CheckString(RightGloveInstance.GetInstance().getState(), "Hook Block"))
+                {
+                    counter += 1;
+                    sideMode = 2;
+                }
+            }
+            else if(counter == 1)
+            {
+                if(CheckString(LeftGloveInstance.GetInstance().getState(), "Hook Block"))
+                {
+                    counter += 1;
+                    sideMode = 0;
+                }
+            }
+            else if(counter == 2)
+            {
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None, true);
                 step += 1; 
                 tutorialInProgress = false;
             }
@@ -232,15 +269,46 @@ public class new_Tutorial : MonoBehaviour
 
             if(!tutorialInProgress)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.Jab);
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.Jab, true);
                 tutorialInProgress = true;
                 counter = 0;
                 sideMode = 1;
-                allowIncrement = true;
             }
-            if(counter == 2)
+            if(counter == 0)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None);
+                if(RightGloveInstance.GetInstance().getState() == "Jab 2")
+                {
+                    counter += 1;
+                    sideMode = 2;
+                }
+            }
+            else if(counter == 1)
+            {
+                if(LeftGloveInstance.GetInstance().getState() == "Jab 2")
+                {
+                    counter += 1;
+                    sideMode = 1;
+                }
+            }
+            else if(counter == 2)
+            {
+                if(RightGloveInstance.GetInstance().getState() == "Jab 2")
+                {
+                    counter += 1;
+                    sideMode = 2;
+                }
+            }
+            else if(counter == 3)
+            {
+                if(LeftGloveInstance.GetInstance().getState() == "Jab 2")
+                {
+                    counter += 1;
+                    sideMode = 0;
+                }
+            }
+            if(counter == 4)
+            {
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None, true);
                 step += 1; 
                 tutorialInProgress = false;
             }
@@ -254,15 +322,46 @@ public class new_Tutorial : MonoBehaviour
 
             if(!tutorialInProgress)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.Hook);
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.Hook, true);
                 tutorialInProgress = true;
                 counter = 0;
                 sideMode = 1;
-                allowIncrement = true;
             }
-            if(counter == 2)
+            if(counter == 0)
             {
-                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None);
+                if(RightGloveInstance.GetInstance().getState() == "Hook 2")
+                {
+                    counter += 1;
+                    sideMode = 2;
+                }
+            }
+            else if(counter == 1)
+            {
+                if(LeftGloveInstance.GetInstance().getState() == "Hook 2")
+                {
+                    counter += 1;
+                    sideMode = 1;
+                }
+            }
+            else if(counter == 2)
+            {
+                if(RightGloveInstance.GetInstance().getState() == "Hook 2")
+                {
+                    counter += 1;
+                    sideMode = 2;
+                }
+            }
+            else if(counter == 3)
+            {
+                if(LeftGloveInstance.GetInstance().getState() == "Hook 2")
+                {
+                    counter += 1;
+                    sideMode = 0;
+                }
+            }
+            if(counter == 4)
+            {
+                tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.None, true);
                 step += 1; 
                 tutorialInProgress = false;
             }
@@ -274,7 +373,7 @@ public class new_Tutorial : MonoBehaviour
             prev_time = Time.time;
             step = step + 1;
 
-            tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.All);
+            tutorialManagerAdvanced.GetInstance().StartTutorial(tutorialManagerAdvanced.ModeSelection.All, false);
         }
         else if (step == 9)
         {
