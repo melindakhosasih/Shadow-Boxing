@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new_tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new_tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_difficulity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/Test2_time.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/back.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/dodge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/new_Tutorial_circle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nerazim/Script/position.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,7 +114,7 @@
       <workItem from="1685380381310" duration="3117000" />
       <workItem from="1685383879261" duration="871000" />
       <workItem from="1685709717520" duration="1058000" />
-      <workItem from="1685952450014" duration="305000" />
+      <workItem from="1685952450014" duration="826000" />
     </task>
     <servers />
   </component>
