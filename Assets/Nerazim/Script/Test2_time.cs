@@ -11,11 +11,11 @@ public class Test2_time : MonoBehaviour
 
     private float prev_time;
 
-    public int round_time = 180;
+    public int round_time = 60;
     // Start is called before the first frame update
     void Start()
     {
-        Time_.gameObject.GetComponent<TextMeshPro>().text = "03 : 00";
+        Time_.gameObject.GetComponent<TextMeshPro>().text = "01 : 00";
         canChange = true;
     }
 
