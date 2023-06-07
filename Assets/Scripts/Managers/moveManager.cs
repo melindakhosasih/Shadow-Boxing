@@ -12,6 +12,7 @@ public class moveManager : MonoBehaviour
 
     public triggerScript[] leftTriggers;
     public triggerScript[] rightTriggers;
+    public bool tutorialMode;
 
     private bool leftDisabled;
     private bool rightDisabled;
@@ -76,7 +77,7 @@ public class moveManager : MonoBehaviour
     {  
         foreach (triggerScript trigger in leftTriggers)
         {   
-            if(new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 1)
+            if(tutorialMode && new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 1)
             {
                 trigger.Hide();
             }
@@ -147,7 +148,7 @@ public class moveManager : MonoBehaviour
         }
         foreach (triggerScript trigger in rightTriggers)
         {
-            if(new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 2)
+            if(tutorialMode && new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 2)
             {
                 trigger.Hide();
             }

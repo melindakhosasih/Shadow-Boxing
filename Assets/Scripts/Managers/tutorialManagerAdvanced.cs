@@ -44,7 +44,7 @@ public class tutorialManagerAdvanced : MonoBehaviour
 
     void Start()
     {
-        
+        moveManager.GetInstance().tutorialMode = true;
     }
 
     void Update()
