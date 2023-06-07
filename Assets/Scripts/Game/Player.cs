@@ -52,7 +52,14 @@ public class Player : MonoBehaviour
                 // print("player hit enemy");
                 gameManager.setPlayerLeftPunch(true);
                 gameManager.updatePlayerScore(1);
-            }
+            } 
+            // else if (other.GetComponent<Collider>().tag == "Enemy_LeftHand") {
+            //     print("change tag");
+            //     other.transform.tag = "Enemy_Block_Left";
+            // } else if (other.GetComponent<Collider>().tag == "Enemy_RightHand") {
+            //     print("change tag");
+            //     other.transform.tag = "Enemy_Block_Right";
+            // }  
         } else if(gameObject.tag == "RightHand") {
             if(other.GetComponent<Collider>().tag == "Enemy" && !gameManager.isPlayerRightPunch()) {
                 GameObject.FindWithTag("Enemy").GetComponent<Test2>().Play_Got_Punch_Ani();
@@ -61,6 +68,13 @@ public class Player : MonoBehaviour
                 gameManager.setPlayerRightPunch(true);
                 gameManager.updatePlayerScore(1);
             }
+            // else if (other.GetComponent<Collider>().tag == "Enemy_LeftHand") {
+            //     print("change tag");
+            //     other.transform.tag = "Enemy_Block_Left";
+            // } else if (other.GetComponent<Collider>().tag == "Enemy_RightHand") {
+            //     print("change tag");
+            //     other.transform.tag = "Enemy_Block_Right";
+            // }  
         }
     }
 
@@ -69,10 +83,26 @@ public class Player : MonoBehaviour
             if(other.GetComponent<Collider>().tag == "Enemy") {
                 gameManager.setPlayerLeftPunch(false);
             }
+            // else if (other.GetComponent<Collider>().tag == "Enemy_Block_Left") {
+            //     other.transform.tag = "Enemy_LeftHand";
+            //     print("AAAAAAAAAAAAAAA");
+            //     print("set back tag");
+            // }  else if (other.GetComponent<Collider>().tag == "Enemy_Block_Right") {
+            //     other.transform.tag = "Enemy_RightHand";
+            //     print("set back tag");
+            // }  
         } else if(gameObject.tag == "RightHand") {
             if(other.GetComponent<Collider>().tag == "Enemy") {
                 gameManager.setPlayerRightPunch(false);
             }
+            //  else if (other.GetComponent<Collider>().tag == "Enemy_Block_Left") {
+            //     other.transform.tag = "Enemy_LeftHand";
+            //     print("AAAAAAAAAAAAAAA");
+            //     print("set back tag");
+            // }  else if (other.GetComponent<Collider>().tag == "Enemy_Block_Right") {
+            //     other.transform.tag = "Enemy_RightHand";
+            //     print("set back tag");
+            // }  
         }
     }
 }

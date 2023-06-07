@@ -31,6 +31,10 @@ TagManager:
   - hp_button
   - start_button
   - difficulity_button
+  - Enemy_Block_Left
+  - Enemy_Block_Right
+  - Player_Block_Left
+  - Player_Block_Right
   layers:
   - Default
   - TransparentFX

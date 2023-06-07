@@ -59,6 +59,13 @@ public class Enemy : MonoBehaviour
                 gameManager.setEnemyLeftPunch(true);
                 gameManager.updateEnemyScore(1);
             }
+            // else if (other.GetComponent<Collider>().tag == "LeftHand") {
+            //     other.transform.tag = "Player_Block_Left";
+            //     print("change tag");
+            // } else if (other.GetComponent<Collider>().tag == "RightHand") {
+            //     other.transform.tag = "Player_Block_Right";
+            //     print("change tag");
+            // } 
         } else if(gameObject.tag == "Enemy_RightHand" && !gameManager.isEnemyRightPunch()) {
             // if(collider.collider.tag == "Player") {
             if(other.GetComponent<Collider>().tag == "Body") {
@@ -66,6 +73,13 @@ public class Enemy : MonoBehaviour
                 gameManager.setEnemyRightPunch(true);
                 gameManager.updateEnemyScore(1);
             }
+            // else if (other.GetComponent<Collider>().tag == "Player_Block_Left") {
+            //     other.transform.tag = "LeftHand";
+            //     print("set back tag");
+            // } else if (other.GetComponent<Collider>().tag == "Player_Block_Right") {
+            //     other.transform.tag = "RightHand";
+            //     print("set back tag");
+            // } 
         }
     }
 
@@ -75,11 +89,17 @@ public class Enemy : MonoBehaviour
             if(other.GetComponent<Collider>().tag == "Body") {
                 gameManager.setEnemyLeftPunch(false);
             }
+            // else if (other.GetComponent<Collider>().tag == "LeftHand" || other.GetComponent<Collider>().tag == "RightHand") {
+            //     other.transform.tag = "Enemy_LeftHand";
+            // } 
         } else if(gameObject.tag == "Enemy_RightHand") {
             // if(collider.collider.tag == "Player") {
             if(other.GetComponent<Collider>().tag == "Body") {
                 gameManager.setEnemyRightPunch(false);
             }
+            // else if (other.GetComponent<Collider>().tag == "LeftHand" || other.GetComponent<Collider>().tag == "RightHand") {
+            //     other.transform.tag = "Enemy_RightHand";
+            // } 
         }
     }
 }
