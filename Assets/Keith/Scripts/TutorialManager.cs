@@ -6,6 +6,7 @@ public class TutorialManager : MonoBehaviour
 {
     private static TutorialManager instance;
     private int Phase = 1;
+    private int counter = 0;
 
     public enum EnemyMode
     {
@@ -49,5 +50,11 @@ public class TutorialManager : MonoBehaviour
     public void ChangeMode(int newMode)
     {
         enemyMode = (EnemyMode)newMode;
+    }
+
+    public void IncrementCounter()
+    {
+        counter += 1;
+        print(counter);
     }
 }

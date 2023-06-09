@@ -8,53 +8,54 @@ using UnityEngine;
 //設定 Behavior 為 Invoke Unity Events
 public class HandAction : MonoBehaviour
 {
-    private float prev_time = 0;
-    private GameObject Tutorial_EventSystem;
-    // Start is called before the first frame update
+    private float lastButtonPressTime = 0f;
+    public float buttonCooldown = 1f;
+
     void Start()
     {
-        Tutorial_EventSystem = GameObject.FindWithTag("EventSystem");
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    public void XbuttonPressed()
-    {
-        print("X pressed!");
-        if (Time.time - prev_time >= 1f)//做時間控制
-        {
-            prev_time = Time.time;
-        }
-        
-    }
-    public void YbuttonPressed()
-    {
-        print("Y pressed!");
-        if (Time.time - prev_time >= 1f)//做時間控制
-        {
-            prev_time = Time.time;
-        }
-    }
     public void AbuttonPressed()
-    {
-        print("A pressed!");
-        if (Time.time - prev_time >= 1f)//做時間控制
+    {   
+        if (Time.time - lastButtonPressTime >= buttonCooldown)
         {
-            Tutorial_EventSystem.GetComponent<new_Tutorial>().sub_step += 1;
-            prev_time = Time.time;
+            lastButtonPressTime = Time.time;
+            print("A pressed!");
+
+            EventManager.GetInstance().IncrementIndex();
         }
     }
-    public void BbuttonPressed()
-    {
-        print("B pressed!");
-        if (Time.time - prev_time >= 1f)//做時間控制
-        {
-            prev_time = Time.time;
-        }
-    }
+    // public void BbuttonPressed()
+    // {
+    //     if (Time.time - lastButtonPressTime >= buttonCooldown)
+    //     {
+    //         lastButtonPressTime = Time.time;
+    //         print("B pressed!");
+
+    //         EventManager.GetInstance().DecrementIndex();
+    //     }
+    // }
+
+    // public void XbuttonPressed()
+    // {
+    //     print("X pressed!");
+    //     if (Time.time - prev_time >= 1f)//做時間控制
+    //     {
+    //         prev_time = Time.time;
+    //     }
+        
+    // }
+    // public void YbuttonPressed()
+    // {
+    //     print("Y pressed!");
+    //     if (Time.time - prev_time >= 1f)//做時間控制
+    //     {
+    //         prev_time = Time.time;
+    //     }
+    // }
 }

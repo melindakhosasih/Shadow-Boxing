@@ -21,7 +21,7 @@ public class new_Tutorial_circle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.FindWithTag("EventSystem").GetComponent<new_Tutorial>().Mission1_Complete = true;
+        // GameObject.FindWithTag("EventSystem").GetComponent<EventManager>().Mission1_Complete = true;
         Destroy(circle);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTrigger : MonoBehaviour
+public class EnemyHit : MonoBehaviour
 {
     private int EnemyState;
 
@@ -16,7 +16,7 @@ public class EnemyTrigger : MonoBehaviour
     void Update()
     {
         EnemyState = EnemyBehaviourTutorial.GetInstance().State;
-        if(EnemyState == 0 || EnemyState == ID)
+        if(EnemyState == 0 || EnemyState != ID)
         {
             Show();
         }
@@ -41,7 +41,7 @@ public class EnemyTrigger : MonoBehaviour
     {
         if(obj.gameObject.tag == "LeftHand" || obj.gameObject.tag == "RightHand")
         {
-            TutorialManager.GetInstance().ChangeMode(ID);
+            TutorialManager.GetInstance().IncrementCounter();
         }
         
     }
@@ -50,7 +50,7 @@ public class EnemyTrigger : MonoBehaviour
     {
         if(obj.gameObject.tag == "LeftHand" || obj.gameObject.tag == "RightHand")
         {
-            TutorialManager.GetInstance().ChangeMode(0);
+            // TutorialManager.GetInstance().ChangeMode(0);
         }
     }
 }

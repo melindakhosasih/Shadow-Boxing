@@ -77,7 +77,7 @@ public class moveManager : MonoBehaviour
     {  
         foreach (triggerScript trigger in leftTriggers)
         {   
-            if(tutorialMode && new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 1)
+            if(tutorialMode && EventManager_Backup.GetInstance().tutorialInProgress && EventManager_Backup.GetInstance().sideMode == 1)
             {
                 trigger.Hide();
             }
@@ -148,7 +148,7 @@ public class moveManager : MonoBehaviour
         }
         foreach (triggerScript trigger in rightTriggers)
         {
-            if(tutorialMode && new_Tutorial.GetInstance().tutorialInProgress && new_Tutorial.GetInstance().sideMode == 2)
+            if(tutorialMode && EventManager_Backup.GetInstance().tutorialInProgress && EventManager_Backup.GetInstance().sideMode == 2)
             {
                 trigger.Hide();
             }

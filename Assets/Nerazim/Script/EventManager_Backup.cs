@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-public class new_Tutorial : MonoBehaviour
+public class EventManager_Backup : MonoBehaviour
 {
-    private static new_Tutorial instance;
+    private static EventManager_Backup instance;
 
     public GameObject videoBox;
     public GameObject videoBox_glove;
@@ -17,8 +17,11 @@ public class new_Tutorial : MonoBehaviour
     public GameObject redCircle1;
     public GameObject redCircle2;
     public GameObject whiteCircle;
-    public GameObject UI;
-    public GameObject UI2;
+
+    [Header("UI")]
+    [SerializeField] private GameObject UI;
+    [SerializeField] private GameObject UI2;
+
     public GameObject ball;
     public GameObject ball1_;
     public GameObject ball2_;
@@ -29,10 +32,6 @@ public class new_Tutorial : MonoBehaviour
     public int mission_complete_number = 0;
     private float prev_time;
     string title1 = "按鍵說明";
-    
-    string mission1 = "Please move to the white circle";
-    string mission2 = "punch tutorial : hit the fixed ball";
-    string mission3 = "punch tutorial : hit the floating ball";
 
     public int sideMode = 0;
     private int counter;
@@ -44,12 +43,12 @@ public class new_Tutorial : MonoBehaviour
     {
         if(instance != null)
         {
-            Debug.LogWarning("more than one tutorial detected");
+            Debug.LogWarning("more than one event manager detected");
         }
         instance = this;
     }
 
-    public static new_Tutorial GetInstance()
+    public static EventManager_Backup GetInstance()
     {
         return instance;
     }
@@ -120,7 +119,7 @@ public class new_Tutorial : MonoBehaviour
         {
             if (sub_step == 0)
             { 
-                UI.gameObject.GetComponent<TextMeshPro>().text = "Welcome to Shadow Boxing! ";
+                UI.gameObject.GetComponent<TextMeshPro>().text = "Welcome to Shadow Boxing!";
                 UI2.gameObject.GetComponent<TextMeshPro>().text =  "       (press A....)";
             }
             if (sub_step == 1)
@@ -167,7 +166,7 @@ public class new_Tutorial : MonoBehaviour
         {
             
             UI.gameObject.GetComponent<TextMeshPro>().text = "Basic Tutorial: ("+mission_complete_number.ToString()+"/3)";
-            UI2.gameObject.GetComponent<TextMeshPro>().text = mission1;
+            UI2.gameObject.GetComponent<TextMeshPro>().text = "Please move to the white circle";
             if (Mission1_Complete)
             {
                 mission_complete_number = mission_complete_number + 1;
@@ -179,7 +178,7 @@ public class new_Tutorial : MonoBehaviour
         else if (step == 2)
         {
             UI.gameObject.GetComponent<TextMeshPro>().text = "Basic Tutorial: ("+mission_complete_number.ToString()+"/3)";
-            UI2.gameObject.GetComponent<TextMeshPro>().text = mission2;
+            UI2.gameObject.GetComponent<TextMeshPro>().text = "punch tutorial : hit the fixed ball";
             if (HitNumber == 1)
             {
                 mission_complete_number = mission_complete_number + 1;
@@ -193,7 +192,7 @@ public class new_Tutorial : MonoBehaviour
         {
             
             UI.gameObject.GetComponent<TextMeshPro>().text = "Basic Tutorial: ("+mission_complete_number.ToString()+"/3)";
-            UI2.gameObject.GetComponent<TextMeshPro>().text = mission3;
+            UI2.gameObject.GetComponent<TextMeshPro>().text = "punch tutorial : hit the floating ball";
             if (HitNumber == 2)
             {
                 redCircle1.SetActive(false);
