@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_HitDetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/Test2_HitDetect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +116,7 @@
       <workItem from="1685383879261" duration="871000" />
       <workItem from="1685709717520" duration="1058000" />
       <workItem from="1685952450014" duration="2996000" />
+      <workItem from="1686314384100" duration="3918000" />
     </task>
     <servers />
   </component>

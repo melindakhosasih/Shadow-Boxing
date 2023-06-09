@@ -32,6 +32,8 @@ public class Test2 : MonoBehaviour
     public bool playerHit = false;
 
     public GameObject playerBody;
+
+    private string dif;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,8 @@ public class Test2 : MonoBehaviour
     void Update()
     {
         //print(defendAni);
+        dif = GameObject.FindWithTag("system").GetComponent<Test2_System>().difficulity;
+        
         if (playerHit)
         {
             playerHit = false;
@@ -79,6 +83,7 @@ public class Test2 : MonoBehaviour
 
     void playAnimation(string action)
     {
+        
         if (action != "got_punch")
         {
             if (ani.isPlaying||move)
@@ -87,7 +92,28 @@ public class Test2 : MonoBehaviour
             }
         }
         
-
+        if (action == "got_punch")
+        {
+            float probablity = 0f;
+            if (dif == "Easy")
+            {
+                probablity = 30f;
+            }
+            else if (dif == "Medium")
+            {
+                probablity = 20f;
+            }
+            else if (dif == "Hard")
+            {
+                probablity = 10f;
+            }
+            float prob = Random.Range(0.0f, 100.0f);
+            if (prob > probablity)
+            {
+                return;
+            }
+            
+        }
         ani.Play(action);
         if (((action == "Waiting")||(action == "Dodge"))||(action=="Guard"))
         {
@@ -140,5 +166,31 @@ public class Test2 : MonoBehaviour
         playAnimation("got_punch");
         canHit = false;
     }
-    
+
+    public void checkDifficulity(string action)
+    {
+        
+        if (action == "got_punch")
+        {
+            string dif = GameObject.FindWithTag("system").GetComponent<Test2_System>().difficulity;
+            float probablity = 0f;
+            if (dif == "Easy")
+            {
+                probablity = 30f;
+            }
+            else if (dif == "Medium")
+            {
+                probablity = 20f;
+            }
+            else if (dif == "Hard")
+            {
+                probablity = 10f;
+            }
+            float prob = Random.Range(0.0f, 100.0f);
+            if (prob > probablity)
+            {
+                return;
+            }
+        }
+    }
 }

@@ -1278,6 +1278,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!20 &179397876 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7480321778402368406, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+  m_PrefabInstance: {fileID: 512405582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &182186129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,7 +1394,7 @@ MonoBehaviour:
   settingBoard: {fileID: 540199223}
   scoreBoard: {fileID: 1001732354}
   enemy: {fileID: 8720322368050908851}
-  rawImage: {fileID: 1803586913}
+  rawImage: {fileID: 828963791}
   reset: 0
   fadeSpeed: 1
   round_time: 180
@@ -2928,6 +2933,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6050268117317225267, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.14
+      objectReference: {fileID: 0}
     - target: {fileID: 7460350091016666621, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2979,6 +2988,18 @@ PrefabInstance:
     - target: {fileID: 7460350091153506762, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
       propertyPath: m_Name
       value: Complete XR Origin Set Up (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460350092079819676, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912146733125274653, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191403965539468471, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+      propertyPath: m_Name
+      value: HitEff
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
@@ -5109,6 +5130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Triggers
       objectReference: {fileID: 0}
+    - target: {fileID: 7393770030672664687, guid: f14c90795756fbe4590fbfe45a16e9e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f14c90795756fbe4590fbfe45a16e9e7, type: 3}
 --- !u!114 &794882440 stripped
@@ -5488,6 +5513,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!224 &828963790 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3037205188127535663, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+  m_PrefabInstance: {fileID: 512405582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &828963791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8912146733125274653, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+  m_PrefabInstance: {fileID: 512405582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &841049236
 GameObject:
   m_ObjectHideFlags: 0
@@ -7987,8 +8028,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001732354}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.881}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -1.85}
   m_LocalScale: {x: 3.5211995, y: 1.4204879, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7997,10 +8038,10 @@ RectTransform:
   - {fileID: 628245742}
   m_Father: {fileID: 2109400952}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.602, y: 0.5325}
+  m_AnchoredPosition: {x: -4.87, y: 0.26}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1010386907
@@ -16852,7 +16893,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 179397876}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -18669,9 +18710,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e1946934163b34eb7a8c3ca7b40bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rawImage: {fileID: 1803586913}
+  rawImage: {fileID: 828963791}
   fadeSpeed: 1
-  rectTransform: {fileID: 1803586912}
+  rectTransform: {fileID: 828963790}
   PlayerBody: {fileID: 1322388108}
 --- !u!4 &8720322368051270307
 Transform:
@@ -18879,9 +18920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e1946934163b34eb7a8c3ca7b40bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rawImage: {fileID: 1803586913}
+  rawImage: {fileID: 828963791}
   fadeSpeed: 1
-  rectTransform: {fileID: 1803586912}
+  rectTransform: {fileID: 828963790}
   PlayerBody: {fileID: 1322388108}
 --- !u!4 &8720322368051270327
 Transform:
