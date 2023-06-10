@@ -36,7 +36,6 @@ public class EventManager : MonoBehaviour
     private float prev_time;
 
     public int sideMode = 0;
-    public bool tutorialInProgress;
     
 
     private void Awake()
@@ -55,7 +54,7 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        tutorialInProgress = false;
+
     }
 
     public void IncrementIndex()
@@ -83,39 +82,51 @@ public class EventManager : MonoBehaviour
             case 2: //Get Ready
                 textFirstIdx += 1;
                 break;
-            case 3: //Block
+            case 3: //Jab
                 showVideo = true;
                 showImage = false;
                 textFirstIdx += 1;
                 break;
-            case 4: //Block Practice
+            case 4: //Jab Practice
+                ExecuteTutorial(1);
                 UI.SetActive(false);
                 break;
-            case 5: //Jab
+            case 5: //Left Hook
+                ExecuteTutorial();
                 UI.SetActive(true);
                 textFirstIdx += 1;
                 videoIdx += 1;
                 break;
-            case 6: //Jab Practice
+            case 6: //Left Hook Practice
+                ExecuteTutorial(2);
                 UI.SetActive(false);
                 break;
-            case 7: //Hook
+            case 7: //Right Hook
+                ExecuteTutorial();
                 UI.SetActive(true);
                 textFirstIdx += 1;
                 videoIdx += 1;
                 break;
-            case 8: //Hook Practice
+            case 8: //Right Hook Practice
+                ExecuteTutorial(3);
                 UI.SetActive(false);
                 break;
             case 9: //Finish Tutorial
+                ExecuteTutorial();
                 UI.SetActive(true);
                 showVideo = false;
+
                 textFirstIdx += 1;
                 textSecondIdx += 1;
                 break;
             default:
                 break;
         }
+    }
+
+    private void ExecuteTutorial(int tutorialValue = 0)
+    {
+        TutorialManager.GetInstance().ToggleTutorial(tutorialValue);
     }
 
     public bool CheckString(string value, string targetValue)

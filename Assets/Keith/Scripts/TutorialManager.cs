@@ -5,8 +5,6 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     private static TutorialManager instance;
-    private int Phase = 1;
-    private int counter = 0;
 
     public enum EnemyMode
     {
@@ -21,7 +19,12 @@ public class TutorialManager : MonoBehaviour
         
     }
 
+    private int Phase = 1;
+    private int counter = 0;
+    private bool tutorialInProgress;
+
     public EnemyMode enemyMode {get; private set;}
+    public int tutorialMode{get; private set;} 
 
     private void Awake()
     {
@@ -40,11 +43,25 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         enemyMode = EnemyMode.Idle;
+        tutorialMode = 0;
+        tutorialInProgress = false;
     }
 
     void Update()
     {
 
+    }
+
+    public void ToggleTutorial(int newValue)
+    {
+        counter = 0;
+        tutorialInProgress = !tutorialInProgress;
+        if(tutorialInProgress) tutorialMode = newValue;
+    }
+
+    public bool GetTutorialStatus()
+    {
+        return tutorialInProgress;
     }
 
     public void ChangeMode(int newMode)
@@ -55,6 +72,10 @@ public class TutorialManager : MonoBehaviour
     public void IncrementCounter()
     {
         counter += 1;
-        print(counter);
+        print("Counter" + counter);
+        if(counter == 3)
+        {
+            EventManager.GetInstance().IncrementIndex();
+        }
     }
 }

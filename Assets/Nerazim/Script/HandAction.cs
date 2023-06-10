@@ -22,7 +22,8 @@ public class HandAction : MonoBehaviour
 
     public void AbuttonPressed()
     {   
-        if (Time.time - lastButtonPressTime >= buttonCooldown)
+        if (Time.time - lastButtonPressTime >= buttonCooldown &&
+            !TutorialManager.GetInstance().GetTutorialStatus())
         {
             lastButtonPressTime = Time.time;
             print("A pressed!");

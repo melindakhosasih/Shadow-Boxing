@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyTrigger : MonoBehaviour
 {
-    private int EnemyState;
+    private int enemyState;
+    private int tutorialState;
 
     public int ID;
 
@@ -15,8 +16,13 @@ public class EnemyTrigger : MonoBehaviour
     
     void Update()
     {
-        EnemyState = EnemyBehaviourTutorial.GetInstance().State;
-        if(EnemyState == 0 || EnemyState == ID)
+        enemyState = EnemyBehaviourTutorial.GetInstance().State;
+        tutorialState = TutorialManager.GetInstance().tutorialMode;
+        if(tutorialState == ID && TutorialManager.GetInstance().GetTutorialStatus())
+        {
+            Hide();
+        }
+        else if(enemyState == 0 || enemyState == ID)
         {
             Show();
         }
@@ -35,6 +41,11 @@ public class EnemyTrigger : MonoBehaviour
     {
         gameObject.GetComponent<Collider>().enabled = true;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
+    }
+
+    void Disable()
+    {
+
     }
 
     void OnTriggerEnter(Collider obj)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHit : MonoBehaviour
 {
-    private int EnemyState;
+    private int enemyState;
 
     public int ID;
 
@@ -15,8 +15,8 @@ public class EnemyHit : MonoBehaviour
     
     void Update()
     {
-        EnemyState = EnemyBehaviourTutorial.GetInstance().State;
-        if(EnemyState == 0 || EnemyState != ID)
+        enemyState = EnemyBehaviourTutorial.GetInstance().State;
+        if(enemyState == 0 || enemyState != ID)
         {
             Show();
         }

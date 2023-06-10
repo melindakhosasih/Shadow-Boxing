@@ -15607,9 +15607,9 @@ MonoBehaviour:
   - Welcome to Shadow Boxing VR!
   - Above are the configurations of the controllers
   - We will now begin the basic tutorial
-  - Block
   - Jab
-  - Hook
+  - Left Hook
+  - Right Hook
   - Congratulations, you have finished the tutorial
   textSecondSequence:
   - Press 'A' to continue
@@ -15623,7 +15623,6 @@ MonoBehaviour:
   videoBox: {fileID: 990187378}
   UI: {fileID: 1715066955}
   sideMode: 0
-  tutorialInProgress: 0
 --- !u!4 &541370415
 Transform:
   m_ObjectHideFlags: 0
