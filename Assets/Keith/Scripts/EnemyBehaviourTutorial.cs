@@ -32,5 +32,8 @@ public class EnemyBehaviourTutorial : MonoBehaviour
     {
         State = (int)TutorialManager.GetInstance().enemyMode;
         Anim.SetInteger("Mode", State);
+
+        int randomInteger = Random.Range(0, 4 + 1);
+        Anim.SetInteger("Rand", randomInteger);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHit : MonoBehaviour
 {
     private int enemyState;
+    private int tutorialState;
 
     public int ID;
 
@@ -16,7 +17,12 @@ public class EnemyHit : MonoBehaviour
     void Update()
     {
         enemyState = EnemyBehaviourTutorial.GetInstance().State;
-        if(enemyState == 0 || enemyState != ID)
+        tutorialState = TutorialManager.GetInstance().tutorialMode;
+        if(tutorialState != ID && TutorialManager.GetInstance().GetTutorialStatus())
+        {
+            Hide();
+        }
+        else if(enemyState == 0 || enemyState != ID)
         {
             Show();
         }

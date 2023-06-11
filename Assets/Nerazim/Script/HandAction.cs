@@ -9,7 +9,7 @@ using UnityEngine;
 public class HandAction : MonoBehaviour
 {
     private float lastButtonPressTime = 0f;
-    public float buttonCooldown = 1f;
+    private float buttonCooldown = 1f;
 
     void Start()
     {
@@ -22,8 +22,7 @@ public class HandAction : MonoBehaviour
 
     public void AbuttonPressed()
     {   
-        if (Time.time - lastButtonPressTime >= buttonCooldown &&
-            !TutorialManager.GetInstance().GetTutorialStatus())
+        if (Time.time - lastButtonPressTime >= buttonCooldown)
         {
             lastButtonPressTime = Time.time;
             print("A pressed!");

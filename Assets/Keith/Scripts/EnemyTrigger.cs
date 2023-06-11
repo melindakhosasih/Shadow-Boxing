@@ -18,7 +18,7 @@ public class EnemyTrigger : MonoBehaviour
     {
         enemyState = EnemyBehaviourTutorial.GetInstance().State;
         tutorialState = TutorialManager.GetInstance().tutorialMode;
-        if(tutorialState == ID && TutorialManager.GetInstance().GetTutorialStatus())
+        if(tutorialState != ID && TutorialManager.GetInstance().GetTutorialStatus())
         {
             Hide();
         }
@@ -34,13 +34,13 @@ public class EnemyTrigger : MonoBehaviour
     void Hide()
     {
         gameObject.GetComponent<Collider>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        // gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 
     void Show()
     {
         gameObject.GetComponent<Collider>().enabled = true;
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        // gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 
     void Disable()

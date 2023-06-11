@@ -17,8 +17,6 @@ public class EventManager : MonoBehaviour
     [SerializeField] private Image img;
     [SerializeField] private VideoPlayer video;
 
-    public string[] textFirstSequence;
-    public string[] textSecondSequence;
     public Sprite[] imgSequence;
     public VideoClip[] videoSequence;
     public GameObject videoBox;
@@ -26,16 +24,8 @@ public class EventManager : MonoBehaviour
 
     private int time_;
     private int idx = 0;
-    private int textFirstIdx = 0;
-    private int textSecondIdx = 0;
-    private int imgIdx = 0;
-    private int videoIdx = 0;
     private float elapsedTime;
-    private bool showImage = true;
-    private bool showVideo = false;
     private float prev_time;
-
-    public int sideMode = 0;
     
 
     private void Awake()
@@ -54,70 +44,113 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-
+        UpdateUI();
     }
 
     public void IncrementIndex()
     {
         idx += 1;
-        adjustValues();
+        UpdateUI();
     }
 
-    public void DecrementIndex()
-    {
-        if(idx != 0) idx -= 1;
-        else idx = 0;
-        adjustValues();
-    }
-
-    private void adjustValues()
+    private void UpdateUI()
     {
         switch(idx)
         {
             case 0: //Introduction
+                img.gameObject.SetActive(true);
+                img.sprite = imgSequence[0];
+
+                videoBox.SetActive(false);
+
+                textFirst.text = "Welcome to Shadow Boxing VR!";
+                textSecond.text = "Press A to Continue...";
                 break;
             case 1: //Main Menu
-                textFirstIdx += 1;
+                textFirst.text = "Above are the configurations of the controllers";
                 break;
             case 2: //Get Ready
-                textFirstIdx += 1;
+                textFirst.text = "We will now begin the basic tutorial";
                 break;
             case 3: //Jab
-                showVideo = true;
-                showImage = false;
-                textFirstIdx += 1;
+                videoBox.SetActive(true);
+                video.clip = videoSequence[0];
+
+                img.gameObject.SetActive(false);
+
+                textFirst.text = "Jab";
                 break;
             case 4: //Jab Practice
                 ExecuteTutorial(1);
-                UI.SetActive(false);
+
+                videoBox.SetActive(false);
+                textFirst.gameObject.SetActive(false);
+                textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
                 break;
             case 5: //Left Hook
                 ExecuteTutorial();
-                UI.SetActive(true);
-                textFirstIdx += 1;
-                videoIdx += 1;
+
+                videoBox.SetActive(true);
+                video.clip = videoSequence[1];
+
+                textFirst.gameObject.SetActive(true);
+                textFirst.text = "Left Hook";
+                textSecond.text = "Press A to Continue...";
                 break;
             case 6: //Left Hook Practice
                 ExecuteTutorial(2);
-                UI.SetActive(false);
+
+                videoBox.SetActive(false);
+                textFirst.gameObject.SetActive(false);
+                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
                 break;
             case 7: //Right Hook
                 ExecuteTutorial();
-                UI.SetActive(true);
-                textFirstIdx += 1;
-                videoIdx += 1;
+
+                videoBox.SetActive(true);
+                video.clip = videoSequence[2];
+
+                textFirst.gameObject.SetActive(true);
+                textFirst.text = "Right Hook";
+                textSecond.text = "Press A to Continue...";
                 break;
             case 8: //Right Hook Practice
                 ExecuteTutorial(3);
-                UI.SetActive(false);
-                break;
-            case 9: //Finish Tutorial
-                ExecuteTutorial();
-                UI.SetActive(true);
-                showVideo = false;
 
-                textFirstIdx += 1;
-                textSecondIdx += 1;
+                videoBox.SetActive(false);
+                textFirst.gameObject.SetActive(false);
+                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                break;
+            case 9: //Block
+                ExecuteTutorial();
+
+                videoBox.SetActive(true);
+                video.clip = videoSequence[3];
+
+                textFirst.gameObject.SetActive(true);
+                textFirst.text = "Block";
+                textSecond.text = "Press A to Continue...";
+                break;
+            case 10: //Block Practice
+                ExecuteTutorial(4);
+
+                videoBox.SetActive(false);
+                textFirst.gameObject.SetActive(false);
+                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                break;
+            case 11: //Game
+                ExecuteTutorial();
+
+                textFirst.gameObject.SetActive(true);
+
+                img.gameObject.SetActive(true);
+
+                textFirst.text = "Above is the flow of the game";
+                textSecond.text = "Press 'A' to continue...";
+                break;
+            case 12: //Finish Tutorial
+                textFirst.text = "Congratulations, you have finished the tutorial";
+                textSecond.text = "Press 'A' to enter the game...";
                 break;
             default:
                 break;
@@ -129,85 +162,8 @@ public class EventManager : MonoBehaviour
         TutorialManager.GetInstance().ToggleTutorial(tutorialValue);
     }
 
-    public bool CheckString(string value, string targetValue)
-    {
-        if (targetValue != value)
-        {
-            targetValue = value;
-            elapsedTime = 0f;
-        }
-        else
-        {
-            elapsedTime += Time.deltaTime;
-        }
-
-        if (elapsedTime >= 3f)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    public bool CheckBool(bool value, bool targetValue)
-    {
-        if (targetValue != value)
-        {
-            targetValue = value;
-            elapsedTime = 0f;
-        }
-        else
-        {
-            elapsedTime += Time.deltaTime;
-        }
-
-        if (elapsedTime >= 3f)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
     void Update()
     { 
-        //Image
-        if(!showImage || imgIdx >= imgSequence.Length)
-        {
-            img.gameObject.SetActive(false);
-        }
-        else
-        {
-            img.gameObject.SetActive(true);
-            img.sprite = imgSequence[imgIdx];
-        }
-        //Video
-        if(!showVideo || videoIdx >= videoSequence.Length)
-        {
-            videoBox.SetActive(false);
-        }
-        else
-        {
-            videoBox.SetActive(true);
-            video.clip = videoSequence[videoIdx];
-        }
-        //FirstRowText
-        if(textFirstIdx < textFirstSequence.Length)
-        {
-            textFirst.text = textFirstSequence[textFirstIdx];
-        }
-        else
-        {
-            textFirst.text = "";
-        }
-        //SecondRowText
-        if(textSecondIdx < textSecondSequence.Length)
-        {
-            textSecond.text = textSecondSequence[textSecondIdx];
-        }
-        else
-        {
-            textSecond.text = "";
-        }
+        
     }
 }

@@ -12,11 +12,7 @@ public class TutorialManager : MonoBehaviour
         Block = 1,
         LeftHookBlock = 2,
         RightHookBlock = 3,
-        LeftJab = -1,
-        RightJab = -1,
-        LeftHook = -3,
-        RightHook = -4
-        
+        Attack = 4
     }
 
     private int Phase = 1;
@@ -64,6 +60,11 @@ public class TutorialManager : MonoBehaviour
         return tutorialInProgress;
     }
 
+    public int GetCounter()
+    {
+        return counter;
+    }
+
     public void ChangeMode(int newMode)
     {
         enemyMode = (EnemyMode)newMode;
@@ -73,7 +74,7 @@ public class TutorialManager : MonoBehaviour
     {
         counter += 1;
         print("Counter" + counter);
-        if(counter == 3)
+        if(counter == 4)
         {
             EventManager.GetInstance().IncrementIndex();
         }
