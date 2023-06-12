@@ -25,6 +25,16 @@ public class Test2_System : MonoBehaviour
     public bool useHP = false;
 
     public string difficulity = "Easy";
+
+    public bool player_Got_hit = false;
+
+    public bool player_camera_need_to_rotate = false;
+
+    public float prev_time;
+
+    public string direction = "Right";
+
+    public bool use_Shock = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +46,27 @@ public class Test2_System : MonoBehaviour
         reset = false;
         round_time = 180;
         difficulity = "Easy";
+        player_Got_hit = false;
+        player_camera_need_to_rotate = false;//
+        prev_time = -3f;
+        direction = "Right";
+        use_Shock = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (player_Got_hit == true)//不讓玩家鏡頭連續轉動
+        {
+            if (Time.time - prev_time > 3f)
+            {
+                prev_time = Time.time;
+                player_camera_need_to_rotate = true;
+                
+            }
+            player_Got_hit = false;
+        }
         rawImage.color =  Color.Lerp(rawImage.color, Color.clear, Time.deltaTime * fadeSpeed * 0.5f);
         if (reset)
         {
@@ -82,20 +108,20 @@ public class Test2_System : MonoBehaviour
         if (difficulity == "Easy")
         {
             GameObject T = GameObject.FindWithTag("Enemy");
-            T.GetComponent<Test2>().qHitCooldown = 7f;
-            T.GetComponent<Test2>().sHitCooldown = 7f;
+            T.GetComponent<Test2>().qHitCooldown = 3.5f;
+            T.GetComponent<Test2>().sHitCooldown = 3f;
         }
         else if (difficulity == "Medium")
         {
             GameObject T = GameObject.FindWithTag("Enemy");
-            T.GetComponent<Test2>().qHitCooldown = 5f;
-            T.GetComponent<Test2>().sHitCooldown = 4f;
+            T.GetComponent<Test2>().qHitCooldown = 2.5f;
+            T.GetComponent<Test2>().sHitCooldown = 2f;
         }
         else if (difficulity == "Hard")
         {
             GameObject T = GameObject.FindWithTag("Enemy");
-            T.GetComponent<Test2>().qHitCooldown = 4f;
-            T.GetComponent<Test2>().sHitCooldown = 2f;
+            T.GetComponent<Test2>().qHitCooldown = 1.5f;
+            T.GetComponent<Test2>().sHitCooldown = 1f;
         }
     }
 }

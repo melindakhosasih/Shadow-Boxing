@@ -9,12 +9,14 @@ public class Hitdetect : MonoBehaviour
     public float fadeSpeed = 1;
     private float imageAlpha = 20f;
     public RectTransform rectTransform;
-   
+
+    
     // Start is called before the first frame update
     void Start()
     {
     
         rectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+        
     }
 
     // Update is called once per frame
@@ -32,6 +34,8 @@ public class Hitdetect : MonoBehaviour
             GameObject.FindWithTag("Enemy").GetComponent<DodgeAnimator>().gotHit = true;
             print("Hit Body");
             rawImage.color = Color.red;
+            
+            
         }
     }
 
@@ -43,6 +47,8 @@ public class Hitdetect : MonoBehaviour
             GameObject.FindWithTag("Enemy").GetComponent<DodgeAnimator>().gotHit = true;
             print("Hit Body");
             rawImage.color = Color.red;
+            
+            
         }
     }
 }
