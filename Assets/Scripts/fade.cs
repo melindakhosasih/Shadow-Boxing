@@ -53,12 +53,7 @@ public class fade : MonoBehaviour
     IEnumerator fadeinmusic(AudioSource audio, float speed,float wait, float from, float to){
         audio.volume = from;
         while(audio.volume < to){
-            Debug.Log(audio.volume);
-            Debug.Log(speed);
-            Debug.Log("in");
-            
             audio.volume = audio.volume + speed;
-                        Debug.Log(audio.volume);
             yield return new WaitForSeconds(wait);
         }
     }
@@ -66,9 +61,6 @@ public class fade : MonoBehaviour
     IEnumerator fadeoutmusic(AudioSource audio, float speed,float wait, float from, float to){
         audio.volume = from;
         while(audio.volume > to){
-            Debug.Log(audio.volume);
-            Debug.Log("out");
-            
             audio.volume = audio.volume - speed;
             yield return new WaitForSeconds(wait);
         }
