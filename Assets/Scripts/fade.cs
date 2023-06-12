@@ -6,14 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class fade : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     private Image image;
+    
     // Start is called before the first frame update
     void Start()
     {
     }
 
     // Update is called once per frame
+    public void musicfadein(float speed,float wait, float from, float to){
+        StartCoroutine(fadeinmusic(audioSource,speed,wait,from,to));
+    }
+    public void musicfadeout(float speed,float wait, float from, float to){
+        StartCoroutine(fadeoutmusic(audioSource,speed,wait,from,to));
+    }
+
+
     public void imagefadein(Image i, float speed,float wait){
         image = i;
         StartCoroutine(fadeinanimation(image,speed,wait));
@@ -38,6 +47,21 @@ public class fade : MonoBehaviour
     IEnumerator fadeoutanimation(Image i, float speed,float wait){
         while(i.color.a>0f){
             i.color = colorfadeout(speed, i.color);
+            yield return new WaitForSeconds(wait);
+        }
+    }
+    IEnumerator fadeinmusic(AudioSource audio, float speed,float wait, float from, float to){
+        audio.volume = from;
+        while(audio.volume < to){
+            audio.volume = audio.volume + speed;
+            yield return new WaitForSeconds(wait);
+        }
+    }
+
+    IEnumerator fadeoutmusic(AudioSource audio, float speed,float wait, float from, float to){
+        audio.volume = from;
+        while(audio.volume > to){
+            audio.volume = audio.volume - speed;
             yield return new WaitForSeconds(wait);
         }
     }

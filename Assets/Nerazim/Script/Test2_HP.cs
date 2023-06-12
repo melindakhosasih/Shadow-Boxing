@@ -7,7 +7,7 @@ public class Test2_HP : MonoBehaviour
 {   
     public GameObject Icon;
     private bool useHP = false;
-
+    private bool use_Shock = true;
     private bool canChange = false;
 
     private float prev_time;
@@ -15,7 +15,7 @@ public class Test2_HP : MonoBehaviour
     void Start()
     {
         useHP = false;
-        Icon.SetActive(false);
+        Icon.SetActive(true);
         prev_time = Time.time;
     }
 
@@ -27,7 +27,7 @@ public class Test2_HP : MonoBehaviour
             canChange = true;
         }
 
-        if (useHP)
+        if (use_Shock)
         {
             Icon.SetActive(true);
         }
@@ -37,6 +37,7 @@ public class Test2_HP : MonoBehaviour
         }
         //print(canChange);
         GameObject.FindWithTag("system").GetComponent<Test2_System>().useHP = useHP;
+        GameObject.FindWithTag("system").GetComponent<Test2_System>().use_Shock = use_Shock;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,7 +50,7 @@ public class Test2_HP : MonoBehaviour
                 
                 prev_time = Time.time;
                 canChange = false;
-                useHP = !useHP;
+                use_Shock = !use_Shock;
             }
         }
     }
@@ -70,7 +71,7 @@ public class Test2_HP : MonoBehaviour
                 }
                 prev_time = Time.time;
                 canChange = false;
-                useHP = !useHP;
+                use_Shock = !use_Shock;
             }
         }
     }

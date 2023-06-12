@@ -15,7 +15,7 @@ public class title_interact_management : MonoBehaviour
     public string nextScene ="Tutorial";
     // Start is called before the first frame update
     void Start(){
-        audioSource.volume=global.volume;
+        //audioSource.volume=global.volume;
     }
     void OnCollisionEnter(Collision other)
     {

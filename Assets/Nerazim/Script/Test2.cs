@@ -97,15 +97,15 @@ public class Test2 : MonoBehaviour
             float probablity = 0f;
             if (dif == "Easy")
             {
-                probablity = 30f;
+                probablity = 20f;
             }
             else if (dif == "Medium")
             {
-                probablity = 20f;
+                probablity = 15f;
             }
             else if (dif == "Hard")
             {
-                probablity = 10f;
+                probablity = 7.5f;
             }
             float prob = Random.Range(0.0f, 100.0f);
             if (prob > probablity)
@@ -128,18 +128,26 @@ public class Test2 : MonoBehaviour
         
         if (action == "HookRight")
         {
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().prev_time = 0f;
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().direction = "Right";
             atkCooldown = qHitCooldown;
         }
         else if (action == "Combo")
         {
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().prev_time = 0f;
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().direction = "Up";
             atkCooldown = sHitCooldown;
         }
         else if (action == "Hook_Left")
         {
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().prev_time = 0f;
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().direction = "Left";
             atkCooldown = qHitCooldown;
         }
         else if (action == "Jab_Right")
         {
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().prev_time = 0f;
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().direction = "Up";
             atkCooldown = qHitCooldown-0.5f;
         }
         canHit = false;
