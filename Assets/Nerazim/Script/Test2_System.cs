@@ -33,6 +33,8 @@ public class Test2_System : MonoBehaviour
     public float prev_time;
 
     public string direction = "Right";
+
+    public bool use_Shock = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,7 @@ public class Test2_System : MonoBehaviour
         player_camera_need_to_rotate = false;//
         prev_time = -3f;
         direction = "Right";
+        use_Shock = true;
     }
 
     // Update is called once per frame
