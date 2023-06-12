@@ -32,6 +32,11 @@ public class FightManager : MonoBehaviour
 
     void Update()
     {
+        checkBlock();
+    }
+
+    private void checkBlock()
+    {
         if(isBlocking)
         {
             blockHitbox.SetActive(true);

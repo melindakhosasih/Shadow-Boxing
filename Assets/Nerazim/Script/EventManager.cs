@@ -59,6 +59,7 @@ public class EventManager : MonoBehaviour
         switch(idx)
         {
             case 0: //Introduction
+                ExecuteTutorial();
                 img.gameObject.SetActive(true);
                 img.sprite = imgSequence[0];
 
@@ -135,7 +136,7 @@ public class EventManager : MonoBehaviour
                 video.clip = videoSequence[3];
 
                 textInfo.gameObject.SetActive(true);
-                textInfo.text = "Block: A defensive stance done by raising your hands to eye level, in this game, this prevents all attacks but is not true in real life";
+                textInfo.text = "Block: A defensive stance done by raising both your hands to eye level. In this game, this prevents all attacks but is not true in real life";
 
                 textSecond.text = "Press A to Continue...";
                 break;
@@ -169,6 +170,7 @@ public class EventManager : MonoBehaviour
 
     private void ExecuteTutorial(int tutorialValue = 0)
     {
+        EnemyBehaviourTutorial.GetInstance().ResetPosition(tutorialValue);
         TutorialManager.GetInstance().ToggleTutorial(tutorialValue);
     }
 

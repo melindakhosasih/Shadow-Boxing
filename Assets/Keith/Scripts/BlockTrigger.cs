@@ -8,7 +8,7 @@ public class BlockTrigger : MonoBehaviour
 
     void Start()
     {
-        
+        print(handCounter);
     }
 
     void Update()
