@@ -35,6 +35,10 @@ public class Test2_System : MonoBehaviour
     public string direction = "Right";
 
     public bool use_Shock = true;
+
+    public GameObject gym;
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +55,7 @@ public class Test2_System : MonoBehaviour
         prev_time = -3f;
         direction = "Right";
         use_Shock = true;
+        gym.transform.position = new Vector3(10, 10, 10);//
     }
 
     // Update is called once per frame
