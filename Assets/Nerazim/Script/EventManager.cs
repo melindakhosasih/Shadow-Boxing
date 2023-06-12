@@ -14,6 +14,7 @@ public class EventManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TMP_Text textFirst;
     [SerializeField] private TMP_Text textSecond;
+    [SerializeField] private TMP_Text textInfo;
     [SerializeField] private Image img;
     [SerializeField] private VideoPlayer video;
 
@@ -62,6 +63,7 @@ public class EventManager : MonoBehaviour
                 img.sprite = imgSequence[0];
 
                 videoBox.SetActive(false);
+                textInfo.gameObject.SetActive(false);
 
                 textFirst.text = "Welcome to Shadow Boxing VR!";
                 textSecond.text = "Press A to Continue...";
@@ -76,15 +78,18 @@ public class EventManager : MonoBehaviour
                 videoBox.SetActive(true);
                 video.clip = videoSequence[0];
 
+                textInfo.gameObject.SetActive(true);
+                textInfo.text = "Jab: A straight attack directly at the enemy, either hands are useable.";
+
                 img.gameObject.SetActive(false);
 
-                textFirst.text = "Jab";
+                textFirst.gameObject.SetActive(false);
                 break;
             case 4: //Jab Practice
                 ExecuteTutorial(1);
 
                 videoBox.SetActive(false);
-                textFirst.gameObject.SetActive(false);
+                textInfo.gameObject.SetActive(false);
                 textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
                 break;
             case 5: //Left Hook
@@ -93,15 +98,16 @@ public class EventManager : MonoBehaviour
                 videoBox.SetActive(true);
                 video.clip = videoSequence[1];
 
-                textFirst.gameObject.SetActive(true);
-                textFirst.text = "Left Hook";
+                textInfo.gameObject.SetActive(true);
+                textInfo.text = "Left Hook: A punch thrown in a circular motion with the left hand, the hand should land at the enemy's side.";
+
                 textSecond.text = "Press A to Continue...";
                 break;
             case 6: //Left Hook Practice
                 ExecuteTutorial(2);
 
                 videoBox.SetActive(false);
-                textFirst.gameObject.SetActive(false);
+                textInfo.gameObject.SetActive(false);
                 textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
                 break;
             case 7: //Right Hook
@@ -110,15 +116,16 @@ public class EventManager : MonoBehaviour
                 videoBox.SetActive(true);
                 video.clip = videoSequence[2];
 
-                textFirst.gameObject.SetActive(true);
-                textFirst.text = "Right Hook";
+                textInfo.gameObject.SetActive(true);
+                textInfo.text = "Right Hook: A punch thrown in a circular motion with the right hand, the hand should land at the enemy's side.";
+
                 textSecond.text = "Press A to Continue...";
                 break;
             case 8: //Right Hook Practice
                 ExecuteTutorial(3);
 
                 videoBox.SetActive(false);
-                textFirst.gameObject.SetActive(false);
+                textInfo.gameObject.SetActive(false);
                 textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
                 break;
             case 9: //Block
@@ -127,14 +134,16 @@ public class EventManager : MonoBehaviour
                 videoBox.SetActive(true);
                 video.clip = videoSequence[3];
 
-                textFirst.gameObject.SetActive(true);
-                textFirst.text = "Block";
+                textInfo.gameObject.SetActive(true);
+                textInfo.text = "Block: A defensive stance done by raising your hands to eye level, in this game, this prevents all attacks but is not true in real life";
+
                 textSecond.text = "Press A to Continue...";
                 break;
             case 10: //Block Practice
                 ExecuteTutorial(4);
 
                 videoBox.SetActive(false);
+                textInfo.gameObject.SetActive(false);
                 textFirst.gameObject.SetActive(false);
                 textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
                 break;
@@ -144,7 +153,8 @@ public class EventManager : MonoBehaviour
                 textFirst.gameObject.SetActive(true);
 
                 img.gameObject.SetActive(true);
-
+                
+                textFirst.gameObject.SetActive(true);
                 textFirst.text = "Above is the flow of the game";
                 textSecond.text = "Press 'A' to continue...";
                 break;

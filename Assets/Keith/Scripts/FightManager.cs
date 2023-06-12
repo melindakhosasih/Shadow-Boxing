@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class FightManager : MonoBehaviour
 {
-    private FightManager instance;
+    private static FightManager instance;
     private bool defendPhase;
+    private bool isBlocking;
+
+    public GameObject blockTrigger;
+    public GameObject blockHitbox;
 
     void Awake()
     {
@@ -16,18 +20,35 @@ public class FightManager : MonoBehaviour
         instance = this;
     }
 
-    public FightManager GetInstance()
+    public static FightManager GetInstance()
     {
         return instance;
     }
 
     void Start()
     {
-        
+        isBlocking = false;
     }
 
     void Update()
     {
-        
+        if(isBlocking)
+        {
+            blockHitbox.SetActive(true);
+        }
+        else
+        {
+            blockHitbox.SetActive(false);
+        }
+    }
+
+    public void OnBlock()
+    {
+        isBlocking = true;
+    }
+
+    public void OffBlock()
+    {
+        isBlocking = false;
     }
 }
