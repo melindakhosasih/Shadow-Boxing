@@ -45,6 +45,7 @@ public class Test2_HitDetect : MonoBehaviour
             
             print("Hit Body");
             rawImage.color = Color.red;
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().player_Got_hit = true;
         }
         else if (other.transform.tag == "GuardBlock")
         {
@@ -63,6 +64,7 @@ public class Test2_HitDetect : MonoBehaviour
             
             print("Hit Body");
             rawImage.color = Color.red;
+            GameObject.FindWithTag("system").GetComponent<Test2_System>().player_Got_hit = true;
         }
         else if (collision.transform.tag == "Body")
         {
