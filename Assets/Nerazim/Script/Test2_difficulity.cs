@@ -11,7 +11,7 @@ public class Test2_difficulity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        difficulity = "Easy";
+        difficulity = global.level;
         difficulity_.gameObject.GetComponent<TextMeshPro>().text = "  "+difficulity;
     }
 
@@ -43,16 +43,19 @@ public class Test2_difficulity : MonoBehaviour
                 if(difficulity=="Easy")
                 {
                     difficulity = "Medium";
+                    global.level = "Medium";
                     difficulity_.gameObject.GetComponent<TextMeshPro>().text = difficulity;
                 }
                 else if(difficulity=="Medium")
                 {
                     difficulity = "Hard";
+                    global.level = "Hard";
                     difficulity_.gameObject.GetComponent<TextMeshPro>().text = "  "+difficulity;
                 }
                 else if(difficulity=="Hard")
                 {
                     difficulity = "Easy";
+                    global.level = "Easy";
                     difficulity_.gameObject.GetComponent<TextMeshPro>().text = "  "+difficulity;
                 }
             }
