@@ -59,16 +59,16 @@ public class EventManager : MonoBehaviour
         switch(idx)
         {
             case 4:
-                textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 6:
-                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 8:
-                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 10:
-                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
         }
         
@@ -111,7 +111,7 @@ public class EventManager : MonoBehaviour
 
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
-                textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 5: //Left Hook
                 ExecuteTutorial();
@@ -129,7 +129,7 @@ public class EventManager : MonoBehaviour
 
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
-                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 7: //Right Hook
                 ExecuteTutorial();
@@ -147,7 +147,7 @@ public class EventManager : MonoBehaviour
 
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
-                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 9: //Block
                 ExecuteTutorial();
@@ -166,23 +166,14 @@ public class EventManager : MonoBehaviour
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
                 textFirst.gameObject.SetActive(false);
-                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
-            case 11: //Game
-                ExecuteTutorial();
-
-                textFirst.gameObject.SetActive(true);
-
-                img.gameObject.SetActive(true);
-                
-                textFirst.gameObject.SetActive(true);
-                textFirst.text = "Above is the flow of the game";
-                textSecond.text = "Press 'A' to continue...";
-                break;
-            case 12: //Finish Tutorial
+            case 11: //Finish Tutorial
                 textFirst.text = "Congratulations, you have finished the tutorial";
                 textSecond.text = "Press 'A' to enter the game...";
                 break;
+            case 12:
+                break;    
             default:
                 break;
         }
