@@ -32,7 +32,7 @@ public class title_interact_management : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Direct Interactor"){
+        if(other.gameObject.tag == "LeftHand" || other.gameObject.tag == "RightHand"){
             //shatterTransform.gameObject.SetActive(true);
             firstPersonCamera.enabled = false;
             overheadCamera.enabled = true;
