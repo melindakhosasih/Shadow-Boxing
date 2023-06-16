@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class BlockHit : MonoBehaviour
 {
+    private int count = 0;
+    private float lastTime;
+
     void Start()
     {
-        
+        lastTime = Time.time;
     }
 
     void Update()
     {
-        
-    }
+        float currentTime = Time.time;
 
-    void OnTriggerEnter(Collider obj)
-    {
-        if(obj.gameObject.tag == "Enemy_LeftHand" || obj.gameObject.tag == "Enemy_RightHand")
+        if (currentTime - lastTime >= 2f)
         {
-            EventManager.GetInstance().IncrementIndex();
+            EventManager.GetInstance().IncrementTimeCount();
+            lastTime = currentTime;
         }
     }
 }

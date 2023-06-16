@@ -23,10 +23,8 @@ public class EventManager : MonoBehaviour
     public GameObject videoBox;
     public GameObject UI;
 
-    private int time_;
+    private int timeCount;
     private int idx = 0;
-    private float elapsedTime;
-    private float prev_time;
     
 
     private void Awake()
@@ -54,6 +52,17 @@ public class EventManager : MonoBehaviour
         UpdateUI();
     }
 
+    public void IncrementTimeCount()
+    {
+        if(timeCount == 3)
+        {
+            IncrementIndex();
+            return;
+        }
+        timeCount += 1;
+        UpdateCounter();
+    }
+
     public void UpdateCounter()
     {
         switch(idx)
@@ -68,7 +77,7 @@ public class EventManager : MonoBehaviour
                 textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 10:
-                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
+                textSecond.text = "Block for " + (4 - timeCount).ToString() + "/3 seconds";
                 break;
         }
         
@@ -161,12 +170,11 @@ public class EventManager : MonoBehaviour
                 textSecond.text = "Press A to Continue...";
                 break;
             case 10: //Block Practice
-                ExecuteTutorial(4);
-
+                timeCount = 0;
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
                 textFirst.gameObject.SetActive(false);
-                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
+                textSecond.text = "Block for " + 3 + "/3 seconds";
                 break;
             case 11: //Finish Tutorial
                 textFirst.text = "Congratulations, you have finished the tutorial";
