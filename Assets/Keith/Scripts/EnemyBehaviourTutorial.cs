@@ -12,9 +12,11 @@ public class EnemyBehaviourTutorial : MonoBehaviour
     private Vector2 playerLocation;
     private float distance;
     private bool tooFar;
+    private Vector3 eulerOffset;
 
+    public bool nearPlayer;
     public GameObject player;
-    public Vector3 eulerOffset = new Vector3(0f, 30f, 0f);
+    public Vector3 c;
     public float distanceTresh = 1.2f;
     public float distanceTolerance = 0.1f;
     public float movementSpeed = 0.5f;
@@ -38,6 +40,7 @@ public class EnemyBehaviourTutorial : MonoBehaviour
 
     void Start()
     {
+        nearPlayer = false;
         Anim = gameObject.GetComponent<Animator>();
     }
 
@@ -92,30 +95,35 @@ public class EnemyBehaviourTutorial : MonoBehaviour
         Anim.SetInteger("Mode", 0);
         State = (int)TutorialManager.GetInstance().enemyMode;
         
-        if (distance > distanceTresh + distanceTolerance)
+        if (!nearPlayer && distance != distanceTresh)
         {
-            StartCoroutine(WaitForSecondsCoroutine(delay));
             MoveToPlayer();
+            if (distance < distanceTresh + distanceTolerance/2)
+            {
+                nearPlayer = true;
+            }
         }
-        else if (distance < distanceTresh - distanceTolerance)
+        else if (!nearPlayer && distance < distanceTresh + distanceTolerance/2)
+        {
+            nearPlayer = true;
+        }
+        else if (nearPlayer && !(distance > distanceTresh - distanceTolerance && distance < distanceTresh + distanceTolerance))
         {
             StartCoroutine(WaitForSecondsCoroutine(delay));
-            MoveAwayFromPlayer();
+            if(distance > distanceTresh)
+            {
+                MoveToPlayer();
+            }
+            if(distance < distanceTresh)
+            {
+                MoveAwayFromPlayer();
+            }
         }
         else
         {
             int tutorialMode = TutorialManager.GetInstance().tutorialMode;
-            print(tutorialMode + " " + State);
-            
-            if(tutorialMode == 4)
-            {
-                Anim.SetInteger("Mode", tutorialMode);
-                Anim.SetInteger("Rand", 0);
-            }
-            else
-            {
-                Anim.SetInteger("Mode", State);
-            }
+            eulerOffset = new Vector3(0f, 0f, 0f);
+            Anim.SetInteger("Mode", State);
             
         }
         LookAtPlayer();
@@ -125,7 +133,10 @@ public class EnemyBehaviourTutorial : MonoBehaviour
     {
         enemyLocation = new Vector2(transform.position.x, transform.position.z);
         playerLocation = new Vector2(player.transform.position.x, player.transform.position.z);
-        distance = (playerLocation - enemyLocation).magnitude;
+        // distance = (playerLocation - enemyLocation).magnitude;
+
+        distance = Vector2.Distance(enemyLocation, playerLocation);
+        print(distance);
 
         lookHere = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
     }
