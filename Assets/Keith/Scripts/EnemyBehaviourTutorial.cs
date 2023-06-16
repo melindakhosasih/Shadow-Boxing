@@ -14,6 +14,7 @@ public class EnemyBehaviourTutorial : MonoBehaviour
     private bool tooFar;
 
     public GameObject player;
+    public Vector3 eulerOffset = new Vector3(0f, 30f, 0f);
     public float distanceTresh = 1.2f;
     public float distanceTolerance = 0.1f;
     public float movementSpeed = 0.5f;
@@ -48,6 +49,7 @@ public class EnemyBehaviourTutorial : MonoBehaviour
     public void LookAtPlayer()
     {
         gameObject.transform.LookAt(lookHere);
+        gameObject.transform.rotation *= Quaternion.Euler(eulerOffset);
     }
 
     public void ResetPosition(int value)
@@ -89,8 +91,6 @@ public class EnemyBehaviourTutorial : MonoBehaviour
 
         Anim.SetInteger("Mode", 0);
         State = (int)TutorialManager.GetInstance().enemyMode;
-
-        AnimatorStateInfo stateInfo = Anim.GetCurrentAnimatorStateInfo(0);
         
         if (distance > distanceTresh + distanceTolerance)
         {
@@ -105,12 +105,16 @@ public class EnemyBehaviourTutorial : MonoBehaviour
         else
         {
             int tutorialMode = TutorialManager.GetInstance().tutorialMode;
-            print(tutorialMode);
+            print(tutorialMode + " " + State);
+            
             if(tutorialMode == 4)
             {
-                Anim.SetInteger("Mode", 4);
-
-                Anim.SetInteger("Rand", tutorialMode - 4);
+                Anim.SetInteger("Mode", tutorialMode);
+                Anim.SetInteger("Rand", 0);
+            }
+            else
+            {
+                Anim.SetInteger("Mode", State);
             }
             
         }

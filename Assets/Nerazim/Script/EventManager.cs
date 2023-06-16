@@ -54,7 +54,27 @@ public class EventManager : MonoBehaviour
         UpdateUI();
     }
 
-    private void UpdateUI()
+    public void UpdateCounter()
+    {
+        switch(idx)
+        {
+            case 4:
+                textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                break;
+            case 6:
+                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                break;
+            case 8:
+                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                break;
+            case 10:
+                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/4";
+                break;
+        }
+        
+    }
+
+    void UpdateUI()
     {
         switch(idx)
         {
