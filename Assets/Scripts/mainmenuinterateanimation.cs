@@ -19,7 +19,7 @@ public class mainmenuinterateanimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lt.color= colorStart;
+        lt.color= colorEnd;
         now = colorEnd;
         dilate = -0.19f;
         changedilate=0.1f / text.Count;
@@ -31,26 +31,26 @@ public class mainmenuinterateanimation : MonoBehaviour
     void Update(){
         time++;
         float lerp = time / duration;
-        // Debug.Log(lerp);
+        Debug.Log(lerp);
         
-        // if(now == colorEnd) {
-        //     if(lt.color == colorStart){
-        //         now = colorStart;
-        //         time=0;
-        //     }
-        //     else{
-        //         lt.color = Color.Lerp(now,colorStart,lerp);
-        //     }
-        // }
-        // else if(now == colorStart){
-        //     if(lt.color == colorEnd){
-        //         now = colorEnd;
-        //         time=0;
-        //     }
-        //     else{
-        //         lt.color = Color.Lerp(now,colorEnd,lerp);
-        //     }
-        // }
+        if(now == colorEnd) {
+            if(lt.color == colorStart){
+                now = colorStart;
+                time=0;
+            }
+            else{
+                lt.color = Color.Lerp(now,colorStart,lerp);
+            }
+        }
+        else if(now == colorStart){
+            if(lt.color == colorEnd){
+                now = colorEnd;
+                time=0;
+            }
+            else{
+                lt.color = Color.Lerp(now,colorEnd,lerp);
+            }
+        }
     }
 
     IEnumerator punch(TextMeshProUGUI puchtext)
