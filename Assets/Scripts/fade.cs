@@ -54,6 +54,7 @@ public class fade : MonoBehaviour
         audio.volume = from;
         while(audio.volume < to){
             audio.volume = audio.volume + speed;
+            //global.volume = audio.volume;
             yield return new WaitForSeconds(wait);
         }
     }
@@ -62,6 +63,7 @@ public class fade : MonoBehaviour
         audio.volume = from;
         while(audio.volume > to){
             audio.volume = audio.volume - speed;
+            //global.volume = audio.volume;
             yield return new WaitForSeconds(wait);
         }
     }
