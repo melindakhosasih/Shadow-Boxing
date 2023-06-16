@@ -8,7 +8,7 @@ public class BlockTrigger : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()

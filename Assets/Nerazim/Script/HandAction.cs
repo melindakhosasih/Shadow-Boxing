@@ -41,15 +41,17 @@ public class HandAction : MonoBehaviour
     //     }
     // }
 
-    // public void XbuttonPressed()
-    // {
-    //     print("X pressed!");
-    //     if (Time.time - prev_time >= 1f)//做時間控制
-    //     {
-    //         prev_time = Time.time;
-    //     }
-        
-    // }
+    public void XbuttonPressed()
+    {
+        if (Time.time - lastButtonPressTime >= buttonCooldown)
+        {
+            lastButtonPressTime = Time.time;
+            print("X pressed!");
+
+            EventManager.GetInstance().IncrementIndex();
+        }
+    }
+    
     // public void YbuttonPressed()
     // {
     //     print("Y pressed!");

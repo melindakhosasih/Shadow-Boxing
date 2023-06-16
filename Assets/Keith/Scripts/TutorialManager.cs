@@ -12,7 +12,8 @@ public class TutorialManager : MonoBehaviour
         Block = 1,
         LeftHookBlock = 2,
         RightHookBlock = 3,
-        Attack = 4
+        Attack = 4,
+        Move = 5
     }
 
     private int Phase = 1;
@@ -21,6 +22,7 @@ public class TutorialManager : MonoBehaviour
 
     public EnemyMode enemyMode {get; private set;}
     public int tutorialMode{get; private set;} 
+
 
     private void Awake()
     {
@@ -45,7 +47,7 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void ToggleTutorial(int newValue)
@@ -73,8 +75,9 @@ public class TutorialManager : MonoBehaviour
     public void IncrementCounter()
     {
         counter += 1;
+        EventManager.GetInstance().UpdateCounter();
         print("Counter" + counter);
-        if(counter == 4)
+        if(counter == 2)
         {
             EventManager.GetInstance().IncrementIndex();
         }
