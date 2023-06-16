@@ -75,8 +75,9 @@ public class TutorialManager : MonoBehaviour
     public void IncrementCounter()
     {
         counter += 1;
+        EventManager.GetInstance().UpdateCounter();
         print("Counter" + counter);
-        if(counter == 4)
+        if(counter == 2)
         {
             EventManager.GetInstance().IncrementIndex();
         }
