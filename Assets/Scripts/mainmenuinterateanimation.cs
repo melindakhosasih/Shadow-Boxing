@@ -31,7 +31,7 @@ public class mainmenuinterateanimation : MonoBehaviour
     void Update(){
         time++;
         float lerp = time / duration;
-        Debug.Log(lerp);
+        // Debug.Log(lerp);
         if(now == colorEnd) {
             if(lt.color == colorStart){
                 now = colorStart;
