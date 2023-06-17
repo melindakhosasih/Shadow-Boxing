@@ -3108,6 +3108,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7460350092079819672, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
   m_PrefabInstance: {fileID: 512405582}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &512405587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7460350091153506761, guid: af4473cd657b4454a9efcd3da9b70e35, type: 3}
+  m_PrefabInstance: {fileID: 512405582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &512405588
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12023,6 +12028,7 @@ GameObject:
   - component: {fileID: 1472063846}
   - component: {fileID: 1472063845}
   - component: {fileID: 1472063847}
+  - component: {fileID: 1472063848}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12085,6 +12091,21 @@ MonoBehaviour:
   - {fileID: 1595137913}
   - {fileID: 1595137912}
   - {fileID: 1595137911}
+--- !u!114 &1472063848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472063844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTransform: {fileID: 512405587}
+  player: {fileID: 1929259577}
+  playerHead: {fileID: 512405585}
 --- !u!1 &1504137383
 GameObject:
   m_ObjectHideFlags: 0

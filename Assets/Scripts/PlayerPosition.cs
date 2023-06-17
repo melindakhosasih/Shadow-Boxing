@@ -32,8 +32,9 @@ public class PlayerPosition : MonoBehaviour{
         player.transform.Rotate(0, -rotationAngleY, 0);
 
         var distanceDiff = resetTransform.position - playerHead.transform.position;
-        Vector3 pos = player.transform.position += distanceDiff;
-        pos.y = 0;
+        Vector3 pos = player.transform.position + distanceDiff;
+        // pos.y = 0;
+        pos.y = player.transform.position.y;
         player.transform.position = pos;
     }
 }
