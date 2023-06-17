@@ -7866,6 +7866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161605548}
   - component: {fileID: 1161605549}
+  - component: {fileID: 1161605550}
   m_Layer: 0
   m_Name: Input Action Manager
   m_TagString: Untagged
@@ -7902,6 +7903,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - {fileID: -944628639613478452, guid: 2a814407d5e94bf4c97abfba3738a129, type: 3}
+--- !u!114 &1161605550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161605547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2a814407d5e94bf4c97abfba3738a129, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1658766234}
+        m_TargetAssemblyTypeName: PlayerPosition, Assembly-CSharp
+        m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d57efbd-0e6d-4324-b887-874208f31a4c
+    m_ActionName: lefthand/x
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 833da15b-4425-4f9a-bc2e-e369fd06d94d
+    m_ActionName: lefthand/y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db8f97d5-94ab-47a8-a04d-3a0fe87146c4
+    m_ActionName: righthand/a
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f64b13e3-7df0-49f1-9887-7989b555b4e6
+    m_ActionName: righthand/b
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: lefthand
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1170852451
 GameObject:
   m_ObjectHideFlags: 0
@@ -10783,7 +10843,6 @@ GameObject:
   - component: {fileID: 1536718158}
   - component: {fileID: 1536718157}
   - component: {fileID: 1536718160}
-  - component: {fileID: 1536718161}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11043,18 +11102,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1536718161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536718155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1586889182
 GameObject:
   m_ObjectHideFlags: 0
@@ -11235,6 +11282,7 @@ GameObject:
   - component: {fileID: 1658766231}
   - component: {fileID: 1658766230}
   - component: {fileID: 1658766233}
+  - component: {fileID: 1658766234}
   m_Layer: 0
   m_Name: script
   m_TagString: Untagged
@@ -11307,6 +11355,21 @@ MonoBehaviour:
   duration: 1
   musicslider: {fileID: 5459145655346152643}
   effectslider: {fileID: 417561362}
+--- !u!114 &1658766234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658766228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTransform: {fileID: 1251185614}
+  player: {fileID: 243896112}
+  playerHead: {fileID: 1536718156}
 --- !u!1 &1662034808
 GameObject:
   m_ObjectHideFlags: 0

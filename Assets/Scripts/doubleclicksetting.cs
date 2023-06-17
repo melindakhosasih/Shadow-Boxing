@@ -20,4 +20,8 @@ public class doubleclicksetting : MonoBehaviour
         }
         lastTimeClicked = Time.time;
     }
+    public void XButtonPressed(){
+        PlayerPosition playerPosition = new PlayerPosition();
+        playerPosition.ResetPosition();
+    }
 }
