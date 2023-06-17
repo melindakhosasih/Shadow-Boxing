@@ -122,9 +122,15 @@ public class EnemyBehaviourTutorial : MonoBehaviour
         else
         {
             int tutorialMode = TutorialManager.GetInstance().tutorialMode;
-            eulerOffset = new Vector3(0f, 0f, 0f);
-            Anim.SetInteger("Mode", State);
+            if(tutorialMode == 4)
+            {
+                Anim.SetInteger("Mode", tutorialMode);
+            }
+            else{
+                Anim.SetInteger("Mode", State);
+            }
             
+
         }
         LookAtPlayer();
     }
@@ -136,7 +142,7 @@ public class EnemyBehaviourTutorial : MonoBehaviour
         // distance = (playerLocation - enemyLocation).magnitude;
 
         distance = Vector2.Distance(enemyLocation, playerLocation);
-        print(distance);
+        // print(distance);
 
         lookHere = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
     }

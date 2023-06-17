@@ -5224,7 +5224,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151606541}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -16048,10 +16048,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e1df7f474f41cb4c8e1f712f04a0710, type: 3}
   - {fileID: 21300000, guid: 1e1df7f474f41cb4c8e1f712f04a0710, type: 3}
   videoSequence:
-  - {fileID: 32900000, guid: 6a60bf24b610fe4439ae12f9fed94619, type: 3}
-  - {fileID: 32900000, guid: 6a60bf24b610fe4439ae12f9fed94619, type: 3}
-  - {fileID: 32900000, guid: 6a60bf24b610fe4439ae12f9fed94619, type: 3}
-  - {fileID: 32900000, guid: 6a60bf24b610fe4439ae12f9fed94619, type: 3}
+  - {fileID: 32900000, guid: 3a8bbee5eacde4d48b60c1b8dc95a162, type: 3}
+  - {fileID: 32900000, guid: 7ef9f118b125a4b41a4c41b1ae2b7770, type: 3}
+  - {fileID: 32900000, guid: 49f658de112535b45a7d0f3484c64e3d, type: 3}
+  - {fileID: 32900000, guid: 37efd44792d576a4a8e05a48bb116bf6, type: 3}
   videoBox: {fileID: 990187378}
   UI: {fileID: 1715066955}
 --- !u!4 &541370415
@@ -120500,7 +120500,7 @@ MonoBehaviour:
   nearPlayer: 0
   player: {fileID: 1612651063}
   c: {x: 0, y: 0, z: 0}
-  distanceTresh: 0.8
+  distanceTresh: 1
   distanceTolerance: 0.3
   movementSpeed: 0.3
   delay: 1
