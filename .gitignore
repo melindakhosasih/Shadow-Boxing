@@ -73,3 +73,5 @@ crashlytics-build.properties
 # /Assets/Assets/*
 # /Assets/XR/*
 # /Assets/Samples/*
+Assets/Scenes/Record/*
+Assets/Scenes/Record.meta
