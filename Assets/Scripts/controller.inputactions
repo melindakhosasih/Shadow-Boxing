@@ -28,7 +28,7 @@
                 {
                     "name": "",
                     "id": "b4272bc0-24f6-4665-978e-d0018e82db59",
-                    "path": "",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -39,7 +39,7 @@
                 {
                     "name": "",
                     "id": "6076b8bd-e130-4b8b-aa21-7fe78b982c2d",
-                    "path": "",
+                    "path": "<XRSimulatedController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -76,7 +76,7 @@
                 {
                     "name": "",
                     "id": "dff22f7e-40c0-48b8-b9cf-25dccf67b180",
-                    "path": "<XRController>/primaryButton",
+                    "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -87,7 +87,7 @@
                 {
                     "name": "",
                     "id": "a578fcde-78f0-462e-94be-b097e1a4d83d",
-                    "path": "<XRController>/secondaryButton",
+                    "path": "<XRSimulatedController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

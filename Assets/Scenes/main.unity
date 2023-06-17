@@ -755,6 +755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetTransform: {fileID: 0}
+  player: {fileID: 0}
+  playerHead: {fileID: 0}
 --- !u!4 &101979883
 Transform:
   m_ObjectHideFlags: 0
@@ -4455,7 +4458,6 @@ GameObject:
   - component: {fileID: 682383834}
   - component: {fileID: 682383833}
   - component: {fileID: 682383832}
-  - component: {fileID: 682383836}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4715,18 +4717,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &682383836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682383830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &717176594
 GameObject:
   m_ObjectHideFlags: 0
@@ -9035,6 +9025,7 @@ GameObject:
   - component: {fileID: 1168253963}
   - component: {fileID: 1168253962}
   - component: {fileID: 1168253966}
+  - component: {fileID: 1168253967}
   m_Layer: 0
   m_Name: script
   m_TagString: Untagged
@@ -9104,6 +9095,21 @@ MonoBehaviour:
   colorEnd: {r: 1, g: 0, b: 0, a: 1}
   orignalcolor: {r: 1, g: 1, b: 1, a: 1}
   duration: 90
+--- !u!114 &1168253967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168253961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTransform: {fileID: 972631868}
+  player: {fileID: 1682498612}
+  playerHead: {fileID: 682383835}
 --- !u!1001 &1175134885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10501,6 +10507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404854185}
   - component: {fileID: 1404854186}
+  - component: {fileID: 1404854187}
   m_Layer: 0
   m_Name: Input Action Manager
   m_TagString: Untagged
@@ -10537,6 +10544,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - {fileID: -944628639613478452, guid: 2a814407d5e94bf4c97abfba3738a129, type: 3}
+--- !u!114 &1404854187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404854184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2a814407d5e94bf4c97abfba3738a129, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1168253967}
+        m_TargetAssemblyTypeName: PlayerPosition, Assembly-CSharp
+        m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d57efbd-0e6d-4324-b887-874208f31a4c
+    m_ActionName: lefthand/x
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 833da15b-4425-4f9a-bc2e-e369fd06d94d
+    m_ActionName: lefthand/y
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db8f97d5-94ab-47a8-a04d-3a0fe87146c4
+    m_ActionName: righthand/a
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f64b13e3-7df0-49f1-9887-7989b555b4e6
+    m_ActionName: righthand/b
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: lefthand
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1422983128
 GameObject:
   m_ObjectHideFlags: 0

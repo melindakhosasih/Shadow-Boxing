@@ -4712,7 +4712,19 @@ MonoBehaviour:
     m_ActionId: 4d57efbd-0e6d-4324-b887-874208f31a4c
     m_ActionName: lefthand/x
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 502277676}
+        m_TargetAssemblyTypeName: PlayerPosition, Assembly-CSharp
+        m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 833da15b-4425-4f9a-bc2e-e369fd06d94d
     m_ActionName: lefthand/y
   - m_PersistentCalls:
@@ -5114,6 +5126,7 @@ GameObject:
   - component: {fileID: 502277672}
   - component: {fileID: 502277670}
   - component: {fileID: 502277675}
+  - component: {fileID: 502277676}
   m_Layer: 0
   m_Name: script
   m_TagString: Untagged
@@ -5189,6 +5202,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37942c350d186e4fb4cc52b71e7aea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &502277676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502277669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTransform: {fileID: 1516320552}
+  player: {fileID: 2007633088}
+  playerHead: {fileID: 2060634147}
 --- !u!43 &512206994
 Mesh:
   m_ObjectHideFlags: 0
@@ -21647,7 +21675,6 @@ GameObject:
   - component: {fileID: 2060634150}
   - component: {fileID: 2060634149}
   - component: {fileID: 2060634148}
-  - component: {fileID: 2060634152}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21908,18 +21935,6 @@ Transform:
   m_Father: {fileID: 1023477138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2060634152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060634146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9faa86d7d13f6964ca6b04fbbf41e94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2060937268
 GameObject:
   m_ObjectHideFlags: 0
