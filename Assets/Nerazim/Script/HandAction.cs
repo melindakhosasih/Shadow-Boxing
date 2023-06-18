@@ -22,7 +22,7 @@ public class HandAction : MonoBehaviour
 
     public void AbuttonPressed()
     {   
-        if (Time.time - lastButtonPressTime >= buttonCooldown)
+        if (Time.time - lastButtonPressTime >= buttonCooldown && !TutorialManager.GetInstance().GetTutorialStatus()) 
         {
             lastButtonPressTime = Time.time;
             print("A pressed!");
@@ -41,16 +41,16 @@ public class HandAction : MonoBehaviour
     //     }
     // }
 
-    public void XbuttonPressed()
-    {
-        if (Time.time - lastButtonPressTime >= buttonCooldown)
-        {
-            lastButtonPressTime = Time.time;
-            print("X pressed!");
+    // public void XbuttonPressed()
+    // {
+    //     if (Time.time - lastButtonPressTime >= buttonCooldown)
+    //     {
+    //         lastButtonPressTime = Time.time;
+    //         print("X pressed!");
 
-            EventManager.GetInstance().IncrementIndex();
-        }
-    }
+    //         EventManager.GetInstance().IncrementIndex();
+    //     }
+    // }
     
     // public void YbuttonPressed()
     // {

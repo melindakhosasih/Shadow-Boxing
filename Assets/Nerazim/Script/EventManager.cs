@@ -49,18 +49,8 @@ public class EventManager : MonoBehaviour
     public void IncrementIndex()
     {
         idx += 1;
+        if(idx > 12) idx = 12;
         UpdateUI();
-    }
-
-    public void IncrementTimeCount()
-    {
-        if(timeCount == 3)
-        {
-            IncrementIndex();
-            return;
-        }
-        timeCount += 1;
-        UpdateCounter();
     }
 
     public void UpdateCounter()
@@ -71,13 +61,13 @@ public class EventManager : MonoBehaviour
                 textSecond.text = "Jab the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 6:
-                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
-                break;
-            case 8:
                 textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
+            case 8:
+                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
+                break;
             case 10:
-                textSecond.text = "Block for " + (4 - timeCount).ToString() + "/3 seconds";
+                textSecond.text = "BLock the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
         }
         
@@ -129,7 +119,7 @@ public class EventManager : MonoBehaviour
                 video.clip = videoSequence[1];
 
                 textInfo.gameObject.SetActive(true);
-                textInfo.text = "Left Hook: A punch thrown in a circular motion with the left hand, the hand should land at the enemy's side.";
+                textInfo.text = "Right Hook: A punch thrown in a circular motion with the left hand, the hand should land at the enemy's side.";
 
                 textSecond.text = "Press A to Continue...";
                 break;
@@ -138,7 +128,7 @@ public class EventManager : MonoBehaviour
 
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
-                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
+                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 7: //Right Hook
                 ExecuteTutorial();
@@ -147,7 +137,7 @@ public class EventManager : MonoBehaviour
                 video.clip = videoSequence[2];
 
                 textInfo.gameObject.SetActive(true);
-                textInfo.text = "Right Hook: A punch thrown in a circular motion with the right hand, the hand should land at the enemy's side.";
+                textInfo.text = "Left Hook: A punch thrown in a circular motion with the right hand, the hand should land at the enemy's side.";
 
                 textSecond.text = "Press A to Continue...";
                 break;
@@ -156,7 +146,7 @@ public class EventManager : MonoBehaviour
 
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
-                textSecond.text = "Right Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
+                textSecond.text = "Left Hook the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 9: //Block
                 ExecuteTutorial();
@@ -170,17 +160,19 @@ public class EventManager : MonoBehaviour
                 textSecond.text = "Press A to Continue...";
                 break;
             case 10: //Block Practice
-                timeCount = 0;
+                ExecuteTutorial(4);
+
                 videoBox.SetActive(false);
                 textInfo.gameObject.SetActive(false);
-                textFirst.gameObject.SetActive(false);
-                textSecond.text = "Block for " + 3 + "/3 seconds";
+                textSecond.text = "Block the Opponent " + TutorialManager.GetInstance().GetCounter() + "/2";
                 break;
             case 11: //Finish Tutorial
+                ExecuteTutorial();
                 textFirst.text = "Congratulations, you have finished the tutorial";
                 textSecond.text = "Press 'A' to enter the game...";
                 break;
             case 12:
+                SceneManager.LoadScene("Scenes/main");
                 break;    
             default:
                 break;

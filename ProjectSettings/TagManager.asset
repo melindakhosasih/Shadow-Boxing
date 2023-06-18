@@ -35,6 +35,7 @@ TagManager:
   - Enemy_Block_Right
   - Player_Block_Left
   - Player_Block_Right
+  - Secondary Camera
   layers:
   - Default
   - TransparentFX

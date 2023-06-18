@@ -49,7 +49,6 @@ public class EnemyHit : MonoBehaviour
         {
             TutorialManager.GetInstance().IncrementCounter();
         }
-        
     }
 
     void OnTriggerExit(Collider obj)

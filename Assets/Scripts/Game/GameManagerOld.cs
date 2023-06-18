@@ -16,7 +16,7 @@ public class GameManagerOld : MonoBehaviour
     private Text playerScoreString;
     private Text enemyScoreString;
     private int curTime;
-    private int duration = 180;
+    private int duration = 1000000000;
     private string timeMin;
     private string timeSec;
     private int playerScore = 0;

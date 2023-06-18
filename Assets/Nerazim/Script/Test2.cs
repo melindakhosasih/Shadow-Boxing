@@ -69,7 +69,6 @@ public class Test2 : MonoBehaviour
         }
         else
         {
-            
             playAnimation(defendAni);
         }
         
