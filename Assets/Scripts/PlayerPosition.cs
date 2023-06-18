@@ -23,6 +23,7 @@ public class PlayerPosition : MonoBehaviour{
             ResetPosition();
             isReset = true;
         }
+        // OVRManager.display.RecenterPose();
     }
 
     // [ContextMenu("Reset Position")]
