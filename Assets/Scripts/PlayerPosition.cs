@@ -30,7 +30,7 @@ public class PlayerPosition : MonoBehaviour{
     public void ResetPosition() {
         print("reset position");
         var rotationAngleY = playerHead.transform.rotation.eulerAngles.y - resetTransform.rotation.eulerAngles.y;
-        player.transform.Rotate(0, -rotationAngleY, 0);
+        player.transform.Rotate(0, rotationAngleY, 0);
 
         var distanceDiff = resetTransform.position - playerHead.transform.position;
         Vector3 pos = player.transform.position + distanceDiff;
