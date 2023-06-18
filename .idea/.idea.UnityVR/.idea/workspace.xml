@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9a45a8-f924-4449-bb5a-4bf027396cc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Asset/2022-10-01 19-12-24.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Asset/2022-10-01 19-12-24.mp4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new_Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new_Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityVR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nerazim/Script/shock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nerazim/Script/shock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +119,9 @@
       <workItem from="1686508769768" duration="697000" />
       <workItem from="1686571616110" duration="8618000" />
       <workItem from="1686927870796" duration="268000" />
+      <workItem from="1687056403342" duration="1106000" />
+      <workItem from="1687058097358" duration="1000" />
+      <workItem from="1687058115603" duration="918000" />
     </task>
     <servers />
   </component>

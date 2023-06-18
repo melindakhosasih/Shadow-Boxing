@@ -24,10 +24,12 @@ public class shock : MonoBehaviour
 
     public void leftHandShock()
     {
-        left_hand.SendHapticImpulse(1.0f, 0.2f);
+        
+        left_hand.SendHapticImpulse(1.0f, 0.25f);
     }
     public void rightHandShock()
     {
-        right_hand.SendHapticImpulse(1.0f, 0.2f);
+        
+        right_hand.SendHapticImpulse(1.0f, 0.25f);
     }
 }
